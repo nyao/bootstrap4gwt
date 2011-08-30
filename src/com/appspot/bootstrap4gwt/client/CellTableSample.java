@@ -85,7 +85,6 @@ public class CellTableSample extends Composite {
         service.getPersons(new AsyncCallback<List<Person>>() {
             @Override
             public void onSuccess(List<Person> result) {
-                System.out.println(result.size());
                 values.clear();
                 values.addAll(result);
                 cellTable.setRowCount(values.size(), true);
