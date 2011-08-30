@@ -1,0 +1,10 @@
+
+.externalToolBuilders/
+.settings/
+test/WEB-INF/appengine-generated/
+war/boot/
+war/WEB-INF/appengine-generated/
+war/WEB-INF/classes/
+war/WEB-INF/deploy/boot
+war/WEB-INF/deploy/
+src/com/appspot/bootstrap4gwt/server/meta/

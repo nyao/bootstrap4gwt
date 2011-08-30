@@ -1,0 +1,39 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.google.gwt.user.cellview.client">
+	<g:HTMLPanel>
+		<g:VerticalPanel>
+			<g:FormPanel ui:field="form">
+          <g:HTMLPanel>
+				    <fieldset>
+				      <div class="clearfix">
+				        <label for="">Age</label>
+				        <div class="input">
+				          <g:TextBox ui:field="age" styleName="xlarge" />
+				          <span class="help-inline">age must be number.</span>
+				        </div>
+				      </div>
+              <div class="clearfix">
+                <label for="">Name</label>
+                <div class="input">
+                  <g:TextBox ui:field="name" styleName="xlarge" />
+                </div>
+              </div>
+              <div class="clearfix">
+                <label for="">Address</label>
+                <div class="input">
+                  <g:TextBox ui:field="address" styleName="xlarge" />
+                </div>
+              </div>
+				    </fieldset>
+            <fieldset>
+              <div class="actions">
+                <g:Button ui:field="button" styleName="btn primary" text="send" />
+              </div>
+            </fieldset>
+          </g:HTMLPanel>
+			</g:FormPanel>
+      <p1:CellTable ui:field="cellTable" styleName="common-table" />
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder>
