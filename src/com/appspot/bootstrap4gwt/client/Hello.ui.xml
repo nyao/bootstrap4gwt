@@ -7,9 +7,14 @@
 	<g:HTMLPanel>
 		<fieldset>
 			<div class="actions">
-				<g:Button ui:field="button" styleName="btn primary" text="count">hello!</g:Button>
+				<g:Button ui:field="button" styleName="btn primary" text="click me!" />
 			</div>
-			<g:Label ui:field="label" text="0" />
+			<div class="clearfix">
+				<label>count</label>
+				<div class="input">
+					<span class="uneditable-input"><g:Label ui:field="label" text="0" /></span>
+				</div>
+			</div>
 		</fieldset>
 	</g:HTMLPanel>
 </ui:UiBinder>

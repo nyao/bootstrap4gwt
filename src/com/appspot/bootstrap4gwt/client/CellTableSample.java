@@ -23,6 +23,7 @@ import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.cellview.client.TextColumn;
+import com.google.gwt.user.client.ui.ListBox;
 
 public class CellTableSample extends Composite {
     
@@ -50,6 +51,10 @@ public class CellTableSample extends Composite {
 
 	@UiField
 	TextBox address;
+	
+	@UiField
+	Button cancel;
+	@UiField ListBox sex;
 
 	public CellTableSample() {
 		initWidget(uiBinder.createAndBindUi(this));
@@ -77,6 +82,14 @@ public class CellTableSample extends Composite {
 			}
 		};
 		cellTable.addColumn(addressClm, "Address");
+
+        TextColumn<Person> sexClm = new TextColumn<Person>() {
+            @Override
+            public String getValue(Person object) {
+                return object.getSex();
+            }
+        };
+        cellTable.addColumn(sexClm, "Sex");
 		
 		reloadPersons();
 	}
@@ -110,7 +123,10 @@ public class CellTableSample extends Composite {
 
 	@UiHandler("button")
 	void onClick(ClickEvent e) {
-		final Person person = new Person(Long.valueOf(age.getValue()), name.getValue(), address.getValue());
+		final Person person = new Person(Long.valueOf(age.getValue()), 
+		                                 name.getValue(), 
+		                                 address.getValue(), 
+		                                 sex.getValue(sex.getSelectedIndex()));
 		
 		service.addPerson(person, new AsyncCallback<Person>() {
             @Override
@@ -129,4 +145,9 @@ public class CellTableSample extends Composite {
         });
 	}
 
+    @UiHandler("cancel")
+    void onCancelClick(ClickEvent event) {
+        form.reset();
+        age.setFocus(true);
+    }
 }

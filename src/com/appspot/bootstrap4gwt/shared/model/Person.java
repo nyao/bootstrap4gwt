@@ -21,15 +21,17 @@ public class Person implements Serializable {
     private Long age;
     private String name;
     private String address;
+    private String sex;
     
     public Person() {
     }
     
-    public Person(Long age, String name, String address) {
+    public Person(Long age, String name, String address, String sex) {
         super();
         this.age = age;
         this.name = name;
         this.address = address;
+        this.sex = sex;
     }
 
     public Long getAge() {
@@ -122,5 +124,13 @@ public class Person implements Serializable {
             return false;
         }
         return true;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 }
