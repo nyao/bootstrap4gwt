@@ -3,6 +3,7 @@
 <module rename-to="boot">
 	<inherits name="com.google.gwt.user.User" />
   <inherits name="org.slim3.gwt.emul.S3Emulation" />
+  <inherits name='com.allen_sauer.gwt.dnd.gwt-dnd' />
   
 	<source path="client" />
   <source path="shared" />
