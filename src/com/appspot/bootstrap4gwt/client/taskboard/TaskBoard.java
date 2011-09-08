@@ -14,11 +14,15 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.Random;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.AbsolutePanel;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.uibinder.client.UiHandler;
+import com.google.gwt.event.dom.client.ClickEvent;
 
 public class TaskBoard extends Composite {
 
@@ -27,14 +31,24 @@ public class TaskBoard extends Composite {
 
     @UiField
     VerticalPanel todo;
+    
     @UiField
     VerticalPanel doing;
+    
     @UiField
     VerticalPanel reviewing;
+    
     @UiField
     VerticalPanel done;
+    
     @UiField
     AbsolutePanel boundaryPanel;
+
+    PickupDragController widgetDragController;
+    
+    @UiField Button addTask;
+    
+    DialogBox taskForm = new DialogBox();
 
     interface TaskBoardUiBinder extends UiBinder<Widget, TaskBoard> {
     }
@@ -66,9 +80,9 @@ public class TaskBoard extends Composite {
             public void onDragEnd(DragEndEvent event) {
             }
         };
-
-        PickupDragController widgetDragController =
-            new PickupDragController(this.boundaryPanel, false);
+        
+        widgetDragController =
+                new PickupDragController(this.boundaryPanel, false);
         widgetDragController.setBehaviorMultipleSelection(false);
         widgetDragController.addDragHandler(demoDragHandler);
 
@@ -77,12 +91,22 @@ public class TaskBoard extends Composite {
             VerticalPanelDropController widgetDropController = new VerticalPanelDropController(columnPanel);
             widgetDragController.registerDropController(widgetDropController);
 
-            int random = Random.nextInt(4);
-            for (int i = 0; i < random; i++) {
-                HTML widget = new HTML("Draggable&nbsp;#" + ++count);
-                columnPanel.add(widget);
-                widgetDragController.makeDraggable(widget);
+            int random = Random.nextInt(2);
+            for (int i = 0; i <= random; i++) {
+                addTask("Task&nbsp;#" + ++count, columnPanel);
             }
         }
+    }
+    
+    public void addTask(String name, VerticalPanel columnPanel) {
+        HTML widget = new HTML(name);
+        columnPanel.add(widget);
+        widgetDragController.makeDraggable(widget);
+    }
+    
+    @UiHandler("addTask")
+    void onAddTaskClick(ClickEvent event) {
+        taskForm.setWidget(new TaskForm(taskForm, todo, this));
+        taskForm.center();
     }
 }

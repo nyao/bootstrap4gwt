@@ -1,0 +1,23 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<div
+			style="position: relative; top: auto; left: auto; margin: 0 auto; z-index: 1"
+			class="modal">
+			<div class="modal-header">
+        <h3>task subject</h3>
+				<a class="close" href="#">×</a>
+			</div>
+			<div class="modal-body">
+        <g:TextArea ui:field="subject" />
+			</div>
+			<div class="modal-footer">
+				<g:Button styleName="btn primary" text="Create" ui:field="button" />
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>
