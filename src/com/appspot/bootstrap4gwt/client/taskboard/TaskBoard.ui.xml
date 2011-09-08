@@ -5,6 +5,7 @@
 		
 	</ui:style>
 	<g:HTMLPanel>
+	 <g:AbsolutePanel ui:field="boundaryPanel">
 		<g:HorizontalPanel>
 			<g:VerticalPanel ui:field="todo">
 				<g:Label text="ToDo" width="100px"/>
@@ -19,6 +20,6 @@
 				<g:Label text="Done" width="100px"/>
 			</g:VerticalPanel>
 		</g:HorizontalPanel>
-	
+		</g:AbsolutePanel>
 	</g:HTMLPanel>
 </ui:UiBinder>
