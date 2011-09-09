@@ -99,7 +99,6 @@ public class TaskBoard extends Composite {
     
     public void addTask(String name, VerticalPanel columnPanel) {
         HTML widget = new HTML(name);
-        widget.setSize("120px", "60px");
         columnPanel.add(widget);
         widgetDragController.makeDraggable(widget);
     }
