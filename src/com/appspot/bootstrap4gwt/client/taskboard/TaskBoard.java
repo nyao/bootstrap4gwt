@@ -30,16 +30,16 @@ public class TaskBoard extends Composite {
         .create(TaskBoardUiBinder.class);
 
     @UiField
-    VerticalPanel todo;
+    VerticalPanelWithSpacer todo;
     
     @UiField
-    VerticalPanel doing;
+    VerticalPanelWithSpacer doing;
     
     @UiField
-    VerticalPanel reviewing;
+    VerticalPanelWithSpacer reviewing;
     
     @UiField
-    VerticalPanel done;
+    VerticalPanelWithSpacer done;
     
     @UiField
     AbsolutePanel boundaryPanel;
@@ -55,7 +55,7 @@ public class TaskBoard extends Composite {
 
     public TaskBoard() {
         initWidget(uiBinder.createAndBindUi(this));
-        List<VerticalPanel> columns = new ArrayList<VerticalPanel>();
+        List<VerticalPanelWithSpacer> columns = new ArrayList<VerticalPanelWithSpacer>();
         columns.add(todo);
         columns.add(doing);
         columns.add(reviewing);
@@ -81,8 +81,7 @@ public class TaskBoard extends Composite {
             }
         };
         
-        widgetDragController =
-                new PickupDragController(this.boundaryPanel, false);
+        widgetDragController = new PickupDragController(this.boundaryPanel, false);
         widgetDragController.setBehaviorMultipleSelection(false);
         widgetDragController.addDragHandler(demoDragHandler);
 
@@ -100,6 +99,7 @@ public class TaskBoard extends Composite {
     
     public void addTask(String name, VerticalPanel columnPanel) {
         HTML widget = new HTML(name);
+        widget.setSize("120px", "60px");
         columnPanel.add(widget);
         widgetDragController.makeDraggable(widget);
     }

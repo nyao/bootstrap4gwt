@@ -1,8 +1,12 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+  xmlns:t="urn:import:com.appspot.bootstrap4gwt.client.taskboard">
 	<ui:style>
-		
+	.taskboard {
+	  width: 120px;
+	  height: 60px;
+	}
 	</ui:style>
 	<g:HTMLPanel>
 		<div class="well">
@@ -13,22 +17,22 @@
 			<g:HTMLPanel>
 				<div class="span4 columns">
 					<h3>ToDo</h3>
-					<g:VerticalPanel ui:field="todo" styleName="zebra-striped" />
+					<t:VerticalPanelWithSpacer ui:field="todo" styleName="zebra-striped {style.taskboard}" />
 				</div>
 
 				<div class="span4 columns">
 					<h3>Doing</h3>
-					<g:VerticalPanel ui:field="doing" styleName="zebra-striped" />
+					<t:VerticalPanelWithSpacer ui:field="doing" styleName="zebra-striped {style.taskboard}" />
 				</div>
 
 				<div class="span4 columns">
 					<h3>Reviewing</h3>
-					<g:VerticalPanel ui:field="reviewing" styleName="zebra-striped" />
+					<t:VerticalPanelWithSpacer ui:field="reviewing" styleName="zebra-striped {style.taskboard}" />
 				</div>
 
 				<div class="span4 columns">
 					<h3>Done</h3>
-					<g:VerticalPanel ui:field="done" styleName="zebra-striped" />
+					<t:VerticalPanelWithSpacer ui:field="done" styleName="zebra-striped {style.taskboard}" />
 				</div>
 			</g:HTMLPanel>
 		</g:AbsolutePanel>
