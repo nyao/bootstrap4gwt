@@ -4,7 +4,6 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DialogBox;
-import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.TextArea;
@@ -27,15 +26,12 @@ public class TaskForm extends Composite {
 
     TaskBoard caller;
 
-    VerticalPanel todo;
-
     interface TaskFormUiBinder extends UiBinder<Widget, TaskForm> {
     }
 
-    public TaskForm(DialogBox form, VerticalPanel todo, TaskBoard taskBoard) {
+    public TaskForm(DialogBox form, TaskBoard tb) {
         this.form = form;
-        this.todo = todo;
-        this.caller = taskBoard;
+        this.caller = tb;
         initWidget(uiBinder.createAndBindUi(this));
     }
 
@@ -45,7 +41,7 @@ public class TaskForm extends Composite {
             event.preventDefault();
             return;
         }
-        caller.addTask(subject.getText(), todo);
+        caller.addStory(subject.getText());
         form.hide();
     }
 }

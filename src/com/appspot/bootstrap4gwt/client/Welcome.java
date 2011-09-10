@@ -2,7 +2,12 @@ package com.appspot.bootstrap4gwt.client;
 
 
 import com.appspot.bootstrap4gwt.client.taskboard.TaskBoard;
+import com.appspot.bootstrap4gwt.client.taskboard.TaskForm;
 import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.RootPanel;
 
 public class Welcome implements EntryPoint {
@@ -11,7 +16,18 @@ public class Welcome implements EntryPoint {
 	public void onModuleLoad() {
 		RootPanel.get("Hello").add(new Hello());
 		RootPanel.get("CellTable").add(new CellTableSample());
-        RootPanel.get("TaskBoard").add(new TaskBoard());
+        final TaskBoard tb = new TaskBoard();
+        RootPanel.get("TaskBoard").add(tb);
+        Button addStory = new Button("add Story", new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                DialogBox taskForm = new DialogBox();
+                taskForm.setWidget(new TaskForm(taskForm, tb));
+                taskForm.center();
+            }
+        });
+        addStory.addStyleName("btn info");
+        RootPanel.get("addStory").add(addStory);
 	}
 
 }

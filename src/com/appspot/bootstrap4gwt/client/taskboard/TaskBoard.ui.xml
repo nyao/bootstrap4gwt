@@ -3,38 +3,8 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui"
   xmlns:t="urn:import:com.appspot.bootstrap4gwt.client.taskboard">
 	<ui:style>
-	.taskboard {
-	  width: 100%;
-	  height: 60px;
-	}
 	</ui:style>
 	<g:HTMLPanel>
-		<div class="well">
-		  <p>add task and move with drag &amp; drop.</p>
-			<g:Button styleName="btn info" ui:field="addTask" text="addTask" />
-		</div>
-		<g:AbsolutePanel ui:field="boundaryPanel">
-			<g:HTMLPanel>
-				<div class="span4 columns">
-					<h3>ToDo</h3>
-					<t:VerticalPanelWithSpacer ui:field="todo" styleName="{style.taskboard}" />
-				</div>
-
-				<div class="span4 columns">
-					<h3>Doing</h3>
-					<t:VerticalPanelWithSpacer ui:field="doing" styleName="{style.taskboard}" />
-				</div>
-
-				<div class="span4 columns">
-					<h3>Reviewing</h3>
-					<t:VerticalPanelWithSpacer ui:field="reviewing" styleName="{style.taskboard}" />
-				</div>
-
-				<div class="span4 columns">
-					<h3>Done</h3>
-					<t:VerticalPanelWithSpacer ui:field="done" styleName="{style.taskboard}" />
-				</div>
-			</g:HTMLPanel>
-		</g:AbsolutePanel>
+		<g:VerticalPanel ui:field="boundaryPanel" />
 	</g:HTMLPanel>
 </ui:UiBinder>

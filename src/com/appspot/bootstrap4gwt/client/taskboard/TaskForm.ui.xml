@@ -9,7 +9,7 @@
 			style="position: relative; top: auto; left: auto; margin: 0 auto; z-index: 1"
 			class="modal">
 			<div class="modal-header">
-        <h3>task subject</h3>
+        <h3>subject</h3>
 				<a class="close" href="#">×</a>
 			</div>
 			<div class="modal-body">
