@@ -38,10 +38,4 @@ public class TaskBoard extends Composite {
         Story s = new Story(text);
         this.boundaryPanel.add(s);
     }
-
-//    @UiHandler("addTask")
-//    void onAddTaskClick(ClickEvent event) {
-//        taskForm.setWidget(new TaskForm(taskForm, todo, this));
-//        taskForm.center();
-//    }
 }

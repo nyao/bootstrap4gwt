@@ -110,9 +110,9 @@ public class Story extends Composite {
     
     @UiHandler("addTask")
     void onAddTaskClick(ClickEvent event) {
-        DialogBox taskForm = new DialogBox();
-        taskForm.setWidget(new TaskForm(taskForm, this));
-        taskForm.center();
+        DialogBox form = new DialogBox();
+        form.setWidget(new TaskForm(form, this));
+        form.center();
     }
 
     public void addTask(String text) {

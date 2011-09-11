@@ -2,7 +2,7 @@ package com.appspot.bootstrap4gwt.client;
 
 
 import com.appspot.bootstrap4gwt.client.taskboard.TaskBoard;
-import com.appspot.bootstrap4gwt.client.taskboard.TaskForm;
+import com.appspot.bootstrap4gwt.client.taskboard.StoryForm;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -22,7 +22,7 @@ public class Welcome implements EntryPoint {
             @Override
             public void onClick(ClickEvent event) {
                 DialogBox taskForm = new DialogBox();
-                taskForm.setWidget(new TaskForm(taskForm, tb));
+                taskForm.setWidget(new StoryForm(taskForm, tb));
                 taskForm.center();
             }
         });
