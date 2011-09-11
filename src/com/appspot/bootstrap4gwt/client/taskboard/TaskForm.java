@@ -25,6 +25,8 @@ public class TaskForm extends Composite {
     DialogBox form;
 
     TaskBoard caller;
+    
+    Story callerByStory;
 
     interface TaskFormUiBinder extends UiBinder<Widget, TaskForm> {
     }
@@ -35,13 +37,24 @@ public class TaskForm extends Composite {
         initWidget(uiBinder.createAndBindUi(this));
     }
 
+    public TaskForm(DialogBox taskForm, Story story) {
+        this.form = taskForm;
+        this.callerByStory = story;
+        initWidget(uiBinder.createAndBindUi(this));
+    }
+
     @UiHandler("button")
     void onButtonClick(ClickEvent event) {
         if (subject.getText().isEmpty()) {
             event.preventDefault();
             return;
         }
-        caller.addStory(subject.getText());
+        
+        if (caller != null) {
+            caller.addStory(subject.getText());
+        } else {
+            callerByStory.addTask(subject.getText());
+        }
         form.hide();
     }
 }

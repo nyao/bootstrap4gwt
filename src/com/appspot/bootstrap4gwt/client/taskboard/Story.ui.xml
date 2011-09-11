@@ -11,9 +11,8 @@
 		<g:AbsolutePanel ui:field="boundaryPanel">
   <g:HTMLPanel>
 			<div class="span3 columns">
-				<h2>
-					<g:Label ui:field="storyName" />
-				</h2>
+				<h2><g:Label ui:field="storyName" /></h2>
+				<g:Button styleName="btn success" ui:field="addTask" text="add task" />
 			</div>
 			<div class="span3 columns">
 				<t:VerticalPanelWithSpacer ui:field="todo"
