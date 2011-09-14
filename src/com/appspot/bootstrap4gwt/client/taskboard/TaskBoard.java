@@ -6,7 +6,7 @@ import java.util.List;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.uibinder.client.UiField;
 
@@ -16,7 +16,7 @@ public class TaskBoard extends Composite {
         .create(TaskBoardUiBinder.class);
 
     @UiField
-    VerticalPanel boundaryPanel;
+    FlowPanel boundaryPanel;
 
     interface TaskBoardUiBinder extends UiBinder<Widget, TaskBoard> {
     }

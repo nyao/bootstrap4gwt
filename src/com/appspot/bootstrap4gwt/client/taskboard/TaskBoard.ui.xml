@@ -5,6 +5,6 @@
 	<ui:style>
 	</ui:style>
 	<g:HTMLPanel>
-		<g:VerticalPanel ui:field="boundaryPanel" />
+		<g:FlowPanel ui:field="boundaryPanel" />
 	</g:HTMLPanel>
 </ui:UiBinder>
