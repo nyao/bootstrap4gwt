@@ -1,19 +1,14 @@
 package com.appspot.bootstrap4gwt.client.taskboard;
 
-import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.FlowPanel;
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Widget;
 
-/**
- * {@link VerticalPanel} which has a permanent spacer at the end to prevent CSS collapse of the
- * panel and its parent.
- */
-public class VerticalPanelWithSpacer extends VerticalPanel {
+public class FlowPanelWithSpacer extends FlowPanel {
 
-  public VerticalPanelWithSpacer() {
-    Label spacerLabel = new Label("");
+  public FlowPanelWithSpacer() {
+    HTML spacerLabel = new HTML("<hr />");
     spacerLabel.setHeight("50px");
-    spacerLabel.setVisible(false);
     super.add(spacerLabel);
   }
 

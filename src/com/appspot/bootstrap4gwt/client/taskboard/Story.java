@@ -8,7 +8,7 @@ import com.allen_sauer.gwt.dnd.client.DragHandler;
 import com.allen_sauer.gwt.dnd.client.DragStartEvent;
 import com.allen_sauer.gwt.dnd.client.PickupDragController;
 import com.allen_sauer.gwt.dnd.client.VetoDragException;
-import com.allen_sauer.gwt.dnd.client.drop.VerticalPanelDropController;
+import com.allen_sauer.gwt.dnd.client.drop.FlowPanelDropController;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
@@ -17,9 +17,9 @@ import com.google.gwt.user.client.ui.AbsolutePanel;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DialogBox;
+import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -29,16 +29,16 @@ public class Story extends Composite {
     private static StoryUiBinder uiBinder = GWT.create(StoryUiBinder.class);
 
     @UiField
-    VerticalPanelWithSpacer todo;
+    FlowPanelWithSpacer todo;
 
     @UiField
-    VerticalPanelWithSpacer doing;
+    FlowPanelWithSpacer doing;
 
     @UiField
-    VerticalPanelWithSpacer reviewing;
+    FlowPanelWithSpacer reviewing;
 
     @UiField
-    VerticalPanelWithSpacer done;
+    FlowPanelWithSpacer done;
 
     @UiField
     AbsolutePanel boundaryPanel;
@@ -58,8 +58,8 @@ public class Story extends Composite {
         initWidget(uiBinder.createAndBindUi(this));
         this.storyName.setText(story);
 
-        List<VerticalPanelWithSpacer> columns =
-            new ArrayList<VerticalPanelWithSpacer>();
+        List<FlowPanelWithSpacer> columns =
+            new ArrayList<FlowPanelWithSpacer>();
         columns.add(todo);
         columns.add(doing);
         columns.add(reviewing);
@@ -85,14 +85,12 @@ public class Story extends Composite {
             }
         };
 
-        widgetDragController =
-            new PickupDragController(this.boundaryPanel, false);
+        widgetDragController = new PickupDragController(this.boundaryPanel, false);
         widgetDragController.setBehaviorMultipleSelection(false);
         widgetDragController.addDragHandler(demoDragHandler);
         int count = 0;
-        for (VerticalPanel columnPanel : columns) {
-            VerticalPanelDropController widgetDropController =
-                new VerticalPanelDropController(columnPanel);
+        for (FlowPanelWithSpacer columnPanel : columns) {
+            FlowPanelDropController widgetDropController = new FlowPanelDropController(columnPanel);
             widgetDragController.registerDropController(widgetDropController);
 
             int random = Random.nextInt(2);
@@ -102,8 +100,9 @@ public class Story extends Composite {
         }
     }
 
-    public void addTask(String name, VerticalPanel columnPanel) {
+    public void addTask(String name, FlowPanel columnPanel) {
         HTML widget = new HTML(name);
+        widget.addStyleName("alert-message block-message info");
         columnPanel.add(widget);
         widgetDragController.makeDraggable(widget);
     }

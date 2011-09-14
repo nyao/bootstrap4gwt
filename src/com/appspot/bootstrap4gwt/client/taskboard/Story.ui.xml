@@ -4,36 +4,31 @@
 	<ui:style>
 		.taskboard {
 			width: 100%;
-			height: 60px;
 		}
 	</ui:style>
 	<g:HTMLPanel>
 		<g:AbsolutePanel ui:field="boundaryPanel">
-  <g:HTMLPanel>
-			<div class="span3 columns">
-				<h2><g:Label ui:field="storyName" /></h2>
-				<g:Button styleName="btn success" ui:field="addTask" text="add task" />
-			</div>
-			<div class="span3 columns">
-				<t:VerticalPanelWithSpacer ui:field="todo"
-					styleName="{style.taskboard}" />
-			</div>
+			<g:HTMLPanel>
+				<div class="span3 columns">
+					<h2><g:Label ui:field="storyName" /></h2>
+					<g:Button styleName="btn success" ui:field="addTask" text="add task" />
+				</div>
+				<div class="span3 columns">
+					<t:FlowPanelWithSpacer ui:field="todo" styleName="{style.taskboard}" />
+				</div>
 
-			<div class="span3 columns">
-				<t:VerticalPanelWithSpacer ui:field="doing"
-					styleName="{style.taskboard}" />
-			</div>
+				<div class="span3 columns">
+					<t:FlowPanelWithSpacer ui:field="doing" styleName="{style.taskboard}" />
+				</div>
 
-			<div class="span3 columns">
-				<t:VerticalPanelWithSpacer ui:field="reviewing"
-					styleName="{style.taskboard}" />
-			</div>
+				<div class="span3 columns">
+					<t:FlowPanelWithSpacer ui:field="reviewing" styleName="{style.taskboard}" />
+				</div>
 
-			<div class="span3 columns">
-				<t:VerticalPanelWithSpacer ui:field="done"
-					styleName="{style.taskboard}" />
-			</div>
-  </g:HTMLPanel>
+				<div class="span3 columns">
+					<t:FlowPanelWithSpacer ui:field="done" styleName="{style.taskboard}" />
+				</div>
+			</g:HTMLPanel>
 		</g:AbsolutePanel>
 	</g:HTMLPanel>
 </ui:UiBinder>
