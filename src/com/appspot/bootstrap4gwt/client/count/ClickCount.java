@@ -15,7 +15,7 @@ import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.user.client.ui.Label;
 
-public class Hello extends Composite {
+public class ClickCount extends Composite {
 	
 	HelloWorldServiceAsync service = GWT.create(HelloWorldService.class);
 
@@ -23,10 +23,10 @@ public class Hello extends Composite {
 	@UiField Button button;
 	@UiField Label label;
 
-	interface HelloUiBinder extends UiBinder<Widget, Hello> {
+	interface HelloUiBinder extends UiBinder<Widget, ClickCount> {
 	}
 
-	public Hello() {
+	public ClickCount() {
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 
