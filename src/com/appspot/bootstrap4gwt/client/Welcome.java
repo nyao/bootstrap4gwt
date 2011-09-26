@@ -1,6 +1,8 @@
 package com.appspot.bootstrap4gwt.client;
 
 
+import com.appspot.bootstrap4gwt.client.celltable.CellTableSample;
+import com.appspot.bootstrap4gwt.client.count.Hello;
 import com.appspot.bootstrap4gwt.client.taskboard.TaskBoard;
 import com.appspot.bootstrap4gwt.client.taskboard.StoryForm;
 import com.google.gwt.core.client.EntryPoint;

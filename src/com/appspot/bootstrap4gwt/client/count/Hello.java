@@ -1,4 +1,4 @@
-package com.appspot.bootstrap4gwt.client;
+package com.appspot.bootstrap4gwt.client.count;
 
 
 import com.appspot.bootstrap4gwt.client.service.HelloWorldService;
