@@ -28,20 +28,23 @@ public class ClickCount extends Composite {
 
 	public ClickCount() {
 		initWidget(uiBinder.createAndBindUi(this));
+		service.getCount(new Counter());
 	}
 
 	@UiHandler("button")
 	void onButtonClick(ClickEvent event) {
-		service.hello(Integer.valueOf(label.getText()), new AsyncCallback<Integer>() {
-			@Override
-			public void onSuccess(Integer result) {
-				label.setText(result.toString());
-			}
-			
-			@Override
-			public void onFailure(Throwable caught) {
-				Window.alert(caught.getMessage());
-			}
-		});
+		service.count(new Counter());
+	}
+
+	private final class Counter implements AsyncCallback<Long> {
+		@Override
+		public void onSuccess(Long result) {
+			label.setText(result.toString());
+		}
+
+		@Override
+		public void onFailure(Throwable caught) {
+			Window.alert(caught.getMessage());
+		}
 	}
 }

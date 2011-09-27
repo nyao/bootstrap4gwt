@@ -7,10 +7,12 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 
 public interface HelloWorldServiceAsync {
 
-	void hello(int count, AsyncCallback<Integer> callback);
-
     void addPerson(Person person, AsyncCallback<Person> callback);
 
     void getPersons(AsyncCallback<List<Person>> callback);
+
+	void count(AsyncCallback<Long> callback);
+
+	void getCount(AsyncCallback<Long> callback);
 
 }

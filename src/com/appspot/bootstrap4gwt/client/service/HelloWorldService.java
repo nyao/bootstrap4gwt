@@ -9,10 +9,12 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 @RemoteServiceRelativePath("service.s3gwt")
 public interface HelloWorldService extends RemoteService {
 
-	int hello(int count);
-
     Person addPerson(Person person);
 
     List<Person> getPersons();
+
+	Long count();
+
+	Long getCount();
 
 }
