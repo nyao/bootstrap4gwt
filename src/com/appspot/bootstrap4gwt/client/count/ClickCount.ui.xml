@@ -5,7 +5,7 @@
 		
 	</ui:style>
 	<g:HTMLPanel>
-		<fieldset>
+	  <form><fieldset>
 			<div class="actions">
 				<g:Button ui:field="button" styleName="btn primary" text="click me!" />
 			</div>
@@ -15,6 +15,6 @@
 					<span class="uneditable-input"><g:Label ui:field="label" text="0" /></span>
 				</div>
 			</div>
-		</fieldset>
+		</fieldset></form>
 	</g:HTMLPanel>
 </ui:UiBinder>
