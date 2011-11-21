@@ -37,7 +37,9 @@ public class CellTableSample extends Composite {
 	@UiField
 	Button button;
 	
-	@UiField(provided=true) CellTable<Person> cellTable = new CellTable<Person>();
+	@UiField(provided=true)
+	CellTable<Person> cellTable = new CellTable<Person>();
+	
 	List<Person> values = new ArrayList<Person>();
 	
 	@UiField

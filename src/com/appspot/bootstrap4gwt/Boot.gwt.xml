@@ -11,4 +11,5 @@
 	<entry-point class="com.appspot.bootstrap4gwt.client.TaskBoardEntry" />
 	<entry-point class="com.appspot.bootstrap4gwt.client.Click" />
 	<entry-point class="com.appspot.bootstrap4gwt.client.CellTable" />
+  <entry-point class="com.appspot.bootstrap4gwt.client.LoginEntryPoint" />
 </module>

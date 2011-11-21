@@ -2,11 +2,16 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<link type="text/css" rel="stylesheet" href="bootstrap.css">
-<link type="text/css" rel="stylesheet" href="docs.css">
+
+<link rel="stylesheet" href="/css/gwt.css">
+<link rel="stylesheet" href="/css/bootstrap.css">
+<link rel="stylesheet" href="/css/docs.css">
+<link rel="stylesheet" href="/css/app.css">
+
 <title>Bootstrap for GWT</title>
-<script type="text/javascript" language="javascript"
-	src="boot/boot.nocache.js"></script>
+<script type="text/javascript" language="javascript" src="boot/boot.nocache.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript" language="javascript" src="js/bootstrap-dropdown.js"></script>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -26,23 +31,28 @@
 	<iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1'
 		style="position: absolute; width: 0; height: 0; border: 0"></iframe>
 
-	<div class="topbar">
-		<div class="fill">
-			<div class="container fixed">
-				<h3>
-					<a href="#">bootstrap4gwt</a>
-				</h3>
-				<ul>
-					<li class=""><a href="#count">Click Count</a>
-					</li>
-          <li class=""><a href="#taskboard">Task Board</a>
-          </li>
-					<li class=""><a href="#celltable">Cell Table</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
+  <div class="topbar" data-dropdown="dropdown">
+    <div class="topbar-inner">
+      <div class="container">
+        <a href="#" class="brand">bootstrap4gwt</a>
+        <ul class="nav">
+          <li class="active"><a href="/">Home</a></li>
+          <li class=""><a href="#count">Click Count</a></li>
+          <li class=""><a href="#taskboard">Task Board</a></li>
+          <li class=""><a href="#celltable">Cell Table</a></li>
+        </ul>
+        </ul>
+        <ul class="nav secondary-nav">
+           <li class="menu">
+             <a class="menu" href="#"><span class="normal-text">Logged in as </span><span id="UserName"></span></a>
+             <ul class="menu-dropdown">
+               <li><span id="link2loginout"></span></li>
+             </ul>
+           </li>
+         </ul>
+      </div>
+    </div>
+  </div>
 
 	<header id="overview" class="jumbotron masthead">
 		<div class="inner">
