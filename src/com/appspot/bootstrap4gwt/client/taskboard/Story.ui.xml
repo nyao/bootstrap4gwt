@@ -10,24 +10,26 @@
 	<g:HTMLPanel>
 		<g:AbsolutePanel ui:field="boundaryPanel">
 			<g:HTMLPanel>
-				<div class="span3 columns">
-					<h2><g:Label ui:field="storyName" /></h2>
-					<g:Button styleName="btn success" ui:field="addTask" text="add task" />
-				</div>
-				<div class="span3 columns">
-					<t:FlowPanelWithSpacer ui:field="todo" styleName="{style.taskboard}" />
-				</div>
-
-				<div class="span3 columns">
-					<t:FlowPanelWithSpacer ui:field="doing" styleName="{style.taskboard}" />
-				</div>
-
-				<div class="span3 columns">
-					<t:FlowPanelWithSpacer ui:field="reviewing" styleName="{style.taskboard}" />
-				</div>
-
-				<div class="span3 columns">
-					<t:FlowPanelWithSpacer ui:field="done" styleName="{style.taskboard}" />
+			  <div class="row">
+					<div class="span3 columns">
+						<h2><g:Label ui:field="storyName" /></h2>
+						<g:Button styleName="btn success" ui:field="addTask" text="add task" />
+					</div>
+					<div class="span3 columns">
+						<t:FlowPanelWithSpacer ui:field="todo" styleName="{style.taskboard}" />
+					</div>
+	
+					<div class="span3 columns">
+						<t:FlowPanelWithSpacer ui:field="doing" styleName="{style.taskboard}" />
+					</div>
+	
+					<div class="span3 columns">
+						<t:FlowPanelWithSpacer ui:field="reviewing" styleName="{style.taskboard}" />
+					</div>
+	
+					<div class="span3 columns">
+						<t:FlowPanelWithSpacer ui:field="done" styleName="{style.taskboard}" />
+					</div>
 				</div>
 			</g:HTMLPanel>
 		</g:AbsolutePanel>
