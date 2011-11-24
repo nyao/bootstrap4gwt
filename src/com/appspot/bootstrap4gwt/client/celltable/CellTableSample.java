@@ -18,12 +18,15 @@ import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.FormPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.user.cellview.client.CellTable;
+import com.google.gwt.user.cellview.client.SimplePager;
 import com.google.gwt.user.cellview.client.TextColumn;
 import com.google.gwt.user.client.ui.ListBox;
+import com.google.gwt.user.client.ui.Anchor;
 
 public class CellTableSample extends Composite {
     
@@ -39,6 +42,11 @@ public class CellTableSample extends Composite {
 	
 	@UiField(provided=true)
 	CellTable<Person> cellTable = new CellTable<Person>();
+	
+    SimplePager pager = new SimplePager();
+    
+    @UiField
+    FlowPanel pagingPanel;
 	
 	List<Person> values = new ArrayList<Person>();
 	
@@ -56,7 +64,11 @@ public class CellTableSample extends Composite {
 	
 	@UiField
 	Button cancel;
-	@UiField ListBox sex;
+	
+	@UiField
+	ListBox sex;
+	@UiField Anchor prev;
+	@UiField Anchor next;
 
 	public CellTableSample() {
 		initWidget(uiBinder.createAndBindUi(this));
@@ -105,6 +117,30 @@ public class CellTableSample extends Composite {
                 cellTable.setRowCount(values.size(), true);
                 cellTable.setRowData(0, values);
                 cellTable.redraw();
+
+                pager.setDisplay(cellTable);
+                pagingPanel.clear();
+                for (int i = 0; i < pager.getPageSize(); i ++) {
+                	if (values.size() <= pager.getPageSize() * i) {
+                		break;
+                	}
+                	final int index = i;
+                	final PageAnchor pageAnchor = new PageAnchor(String.valueOf(index)) {
+        				@Override
+        				void onAnchorClick(ClickEvent event) {
+        					PageAnchor before = (PageAnchor) pagingPanel.getWidget(pager.getPage());
+        					before.deactivation();
+        					
+        			    	pager.setPage(index);
+        			    	activation();
+        			        cellTable.setRowCount(values.size(), true);
+        			        cellTable.setRowData(0, values);
+        			        cellTable.redraw();
+        				}
+        			};
+        			if (index == pager.getPage()) pageAnchor.activation(); 
+        			pagingPanel.add(pageAnchor);
+                }
             }
             
             @Override
@@ -133,10 +169,7 @@ public class CellTableSample extends Composite {
 		service.addPerson(person, new AsyncCallback<Person>() {
             @Override
             public void onSuccess(Person result) {
-                values.add(person);
-                cellTable.setRowCount(values.size(), true);
-                cellTable.setRowData(0, values);
-                cellTable.redraw();
+            	reloadPersons();
                 form.reset();
             }
             
@@ -151,5 +184,32 @@ public class CellTableSample extends Composite {
     void onCancelClick(ClickEvent event) {
         form.reset();
         age.setFocus(true);
+    }
+	
+    @UiHandler("prev")
+	void onPrevClick(ClickEvent event) {
+    	setPageAndRedraw(pager.getPage() - 1);
+	}
+	
+    @UiHandler("next")
+	void onNextClick(ClickEvent event) {
+    	setPageAndRedraw(pager.getPage() + 1);
+	}
+    
+    void setPageAndRedraw(int page) {
+    	if (page < 0 || page > pager.getPageCount()) {
+    		return;
+    	}
+		PageAnchor before = (PageAnchor) pagingPanel.getWidget(pager.getPage());
+		before.deactivation();
+		
+    	pager.setPage(page);
+    	
+		PageAnchor after = (PageAnchor) pagingPanel.getWidget(pager.getPage());
+		after.activation();
+
+        cellTable.setRowCount(values.size(), true);
+        cellTable.setRowData(0, values);
+        cellTable.redraw();
     }
 }
