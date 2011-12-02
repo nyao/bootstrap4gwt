@@ -35,6 +35,7 @@
 								<g:ListBox ui:field="sex" styleName="medium">
 									<g:item value="Man">Man</g:item>
 									<g:item value="Female">Female</g:item>
+                  <g:item value="Other">Other</g:item>
 								</g:ListBox>
 							</div>
 						</div>
