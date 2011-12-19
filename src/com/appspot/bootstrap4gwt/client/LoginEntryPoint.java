@@ -21,10 +21,18 @@ public class LoginEntryPoint implements EntryPoint {
             public void onSuccess(Login login) {
                 if (login.isUserLoggedIn) {
                     RootPanel.get("UserName").add(new InlineLabel(login.user.getEmail()));
-                    RootPanel.get("link2loginout").add(new Anchor("logout", login.logoutUrl));
+					RootPanel.get("link2loginout").add(new Anchor("signout", login.logoutUrl));
+                    RootPanel.get("UserNameOnBoard").add(new InlineLabel(login.user.getEmail()));
+                    Anchor w = new Anchor("signout", login.logoutUrl);
+                    w.addStyleName("btn primary");
+                    RootPanel.get("link2loginoutOnBoard").add(w);
                 } else {
                     RootPanel.get("UserName").add(new InlineLabel("guest(please signin)"));
-                    RootPanel.get("link2loginout").add(new Anchor("login", login.loginUrl));
+					RootPanel.get("link2loginout").add(new Anchor("signin", login.loginUrl));
+                    RootPanel.get("UserNameOnBoard").add(new InlineLabel("guest(please signin)"));
+                    Anchor w = new Anchor("signin", login.loginUrl);
+                    w.addStyleName("btn primary");
+                    RootPanel.get("link2loginoutOnBoard").add(w);
                 }
             }
 
