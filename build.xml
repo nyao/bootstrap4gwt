@@ -1,4 +1,4 @@
-<project name="slim3-blank" default="gen-controller" basedir=".">
+<project name="bootstrap4gwt" default="gen-controller" basedir=".">
     <property file="build.properties" />
 
     <path id="classpath">
