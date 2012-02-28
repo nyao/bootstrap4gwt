@@ -59,6 +59,6 @@
                 </li>
             </ul>
         </div>
-        <p1:CellTable ui:field="cellTable" styleName="table table-striped" />
+        <p1:CellTable ui:field="cellTable" styleName="table table-striped" pageSize="5" />
     </g:HTMLPanel>
 </ui:UiBinder>

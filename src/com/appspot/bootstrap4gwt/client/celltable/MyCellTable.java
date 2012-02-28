@@ -115,10 +115,7 @@ public class MyCellTable extends Composite {
 
         pager.setDisplay(cellTable);
         pagingPanel.clear();
-        for (int i = 0; i < pager.getPageSize(); i++) {
-            if (values.size() <= pager.getPageSize() * i) {
-                break;
-            }
+        for (int i = 0; i < pager.getPageCount(); i++) {
             final int index = i;
             final PageAnchor pageAnchor = new PageAnchor(String.valueOf(index)) {
                 @Override
@@ -175,7 +172,7 @@ public class MyCellTable extends Composite {
     }
 
     void setPageAndRedraw(int page) {
-        if (page < 0 || page > pager.getPageCount()) {
+        if (page < 0 || page >= pager.getPageCount() - 1) {
             return;
         }
         PageAnchor before = (PageAnchor) pagingPanel.getWidget(pager.getPage());
