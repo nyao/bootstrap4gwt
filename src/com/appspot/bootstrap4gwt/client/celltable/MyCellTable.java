@@ -100,16 +100,15 @@ public class MyCellTable extends Composite {
         };
         cellTable.addColumn(sexClm, "Sex");
 
-        reloadPersons();
-    }
-
-    private void reloadPersons() {
-        values.clear();
         for (int i = 0; i < 30; i ++) {
             Person p = new Person(10L + i, "Hoge" + i, "Foo" + i, "Bar" + i);
             values.add(p);
         }
         
+        view();
+    }
+
+    private void view() {
         cellTable.setRowCount(values.size(), true);
         cellTable.setRowData(0, values);
         cellTable.redraw();
@@ -155,6 +154,7 @@ public class MyCellTable extends Composite {
                 Long.valueOf(age.getValue()), name.getValue(), address.getValue(), sex.getValue(sex.getSelectedIndex()));
 
         values.add(person);
+        view();
         form.reset();
     }
 
