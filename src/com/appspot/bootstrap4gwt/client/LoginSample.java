@@ -11,7 +11,7 @@ import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.InlineLabel;
 import com.google.gwt.user.client.ui.RootPanel;
 
-public class LoginEntryPoint implements EntryPoint {
+public class LoginSample implements EntryPoint {
 
     LoginServiceAsync service = GWT.create(LoginService.class);
 

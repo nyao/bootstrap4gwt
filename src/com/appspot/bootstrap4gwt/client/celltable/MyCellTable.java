@@ -23,11 +23,11 @@ import com.google.gwt.user.cellview.client.TextColumn;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.Anchor;
 
-public class CellTableSample extends Composite {
+public class MyCellTable extends Composite {
 
     private static CellTableSampleUiBinder uiBinder = GWT.create(CellTableSampleUiBinder.class);
 
-    interface CellTableSampleUiBinder extends UiBinder<Widget, CellTableSample> {
+    interface CellTableSampleUiBinder extends UiBinder<Widget, MyCellTable> {
     }
 
     @UiField
@@ -65,7 +65,7 @@ public class CellTableSample extends Composite {
     @UiField
     Anchor next;
 
-    public CellTableSample() {
+    public MyCellTable() {
         initWidget(uiBinder.createAndBindUi(this));
 
         TextColumn<Person> ageClm = new TextColumn<Person>() {

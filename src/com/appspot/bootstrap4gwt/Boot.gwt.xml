@@ -7,8 +7,8 @@
     <source path="client" />
     <source path="shared" />
 
-    <entry-point class="com.appspot.bootstrap4gwt.client.TaskBoardEntry" />
-    <entry-point class="com.appspot.bootstrap4gwt.client.Click" />
-    <entry-point class="com.appspot.bootstrap4gwt.client.CellTable" />
-    <entry-point class="com.appspot.bootstrap4gwt.client.LoginEntryPoint" />
+    <entry-point class="com.appspot.bootstrap4gwt.client.TaskBoardSample" />
+    <entry-point class="com.appspot.bootstrap4gwt.client.ClickSample" />
+    <entry-point class="com.appspot.bootstrap4gwt.client.CellTableSample" />
+    <entry-point class="com.appspot.bootstrap4gwt.client.LoginSample" />
 </module>
