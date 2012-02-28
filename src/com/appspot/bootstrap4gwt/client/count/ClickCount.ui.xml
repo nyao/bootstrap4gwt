@@ -6,12 +6,12 @@
 	</ui:style>
 	<g:HTMLPanel>
 	  <form><fieldset>
-			<div class="actions">
-				<g:Button ui:field="button" styleName="btn primary" text="click me!" />
+			<div class="form-actions">
+				<g:Button ui:field="button" styleName="btn btn-primary" text="click me!" />
 			</div>
-			<div class="clearfix">
-				<label>count</label>
-				<div class="input">
+			<div class="control-group">
+				<label class="control-label">count</label>
+				<div class="controls">
 					<span class="uneditable-input"><g:Label ui:field="label" text="0" /></span>
 				</div>
 			</div>

@@ -35,9 +35,6 @@ public class Story extends Composite {
     FlowPanelWithSpacer doing;
 
     @UiField
-    FlowPanelWithSpacer reviewing;
-
-    @UiField
     FlowPanelWithSpacer done;
 
     @UiField
@@ -62,7 +59,6 @@ public class Story extends Composite {
             new ArrayList<FlowPanelWithSpacer>();
         columns.add(todo);
         columns.add(doing);
-        columns.add(reviewing);
         columns.add(done);
 
         DragHandler demoDragHandler = new DragHandler() {
@@ -102,7 +98,7 @@ public class Story extends Composite {
 
     public void addTask(String name, FlowPanel columnPanel) {
         HTML widget = new HTML(name);
-        widget.addStyleName("alert-message block-message info");
+        widget.addStyleName("alert alert-info");
         columnPanel.add(widget);
         widgetDragController.makeDraggable(widget);
     }

@@ -1,60 +1,64 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
-<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.google.gwt.user.cellview.client">
-	 <ui:style>
-    .panel {
-      display: inline;
-    }
-  </ui:style>
-	<g:HTMLPanel>
-			<g:FormPanel ui:field="form">
-				<g:HTMLPanel>
-					<fieldset>
-						<div class="clearfix">
-							<label for="">Age</label>
-							<div class="input">
-								<g:TextBox ui:field="age" styleName="xlarge" />
-								<span class="help-inline">age must be number.</span>
-							</div>
-						</div>
-						<div class="clearfix">
-							<label for="">Name</label>
-							<div class="input">
-								<g:TextBox ui:field="name" styleName="xlarge" />
-							</div>
-						</div>
-						<div class="clearfix">
-							<label for="">Address</label>
-							<div class="input">
-								<g:TextBox ui:field="address" styleName="xlarge" />
-							</div>
-						</div>
-						<div class="clearfix">
-							<label for="mediumSelect">Sex</label>
-							<div class="input">
-								<g:ListBox ui:field="sex" styleName="medium">
-									<g:item value="Man">Man</g:item>
-									<g:item value="Female">Female</g:item>
-                  <g:item value="Other">Other</g:item>
-								</g:ListBox>
-							</div>
-						</div>
-					</fieldset>
-					<fieldset>
-						<div class="actions">
-							<g:Button ui:field="button" styleName="btn primary" text="send" />
-							<g:Button ui:field="cancel" styleName="btn" text="cancel" />
-						</div>
-					</fieldset>
-				</g:HTMLPanel>
-			</g:FormPanel>
-			<div class="pagination">
-			  <ul>
-			    <li><g:Anchor styleName="prev" text="prev" ui:field="prev" /></li>
-			    <g:FlowPanel ui:field="pagingPanel" styleName="{style.panel}" />
-          <li><g:Anchor styleName="next" text="next" ui:field="next" /></li>
-			  </ul>
-			</div>
-			<p1:CellTable ui:field="cellTable" styleName="common-table" />
-	</g:HTMLPanel>
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui"
+    xmlns:p1="urn:import:com.google.gwt.user.cellview.client">
+    <ui:style>
+        .panel {
+        	display: inline;
+        }
+    </ui:style>
+    <g:HTMLPanel>
+        <g:FormPanel ui:field="form" styleName="form-horizontal">
+            <g:HTMLPanel>
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label">Age</label>
+                        <div class="controls">
+                            <g:TextBox ui:field="age" styleName="xlarge" />
+                            <span class="help-inline">age must be number.</span>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Name</label>
+                        <div class="controls">
+                            <g:TextBox ui:field="name" styleName="xlarge" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Address</label>
+                        <div class="controls">
+                            <g:TextBox ui:field="address" styleName="xlarge" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="sex">Sex</label>
+                        <div class="controls">
+                            <g:ListBox ui:field="sex" styleName="medium">
+                                <g:item value="Man">Man</g:item>
+                                <g:item value="Female">Female</g:item>
+                                <g:item value="Other">Other</g:item>
+                            </g:ListBox>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="form-actions">
+                        <g:Button ui:field="button" styleName="btn btn-primary" text="send" />
+                        <g:Button ui:field="cancel" styleName="btn" text="cancel" />
+                    </div>
+                </fieldset>
+            </g:HTMLPanel>
+        </g:FormPanel>
+        <div class="pagination">
+            <ul>
+                <li>
+                    <g:Anchor styleName="prev" text="prev" ui:field="prev" />
+                </li>
+                <g:FlowPanel ui:field="pagingPanel" styleName="{style.panel}" />
+                <li>
+                    <g:Anchor styleName="next" text="next" ui:field="next" />
+                </li>
+            </ul>
+        </div>
+        <p1:CellTable ui:field="cellTable" styleName="table table-striped" />
+    </g:HTMLPanel>
 </ui:UiBinder>
