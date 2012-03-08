@@ -1,6 +1,8 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
-<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui"
-    xmlns:p1="urn:import:com.google.gwt.user.cellview.client">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+    xmlns:g="urn:import:com.google.gwt.user.client.ui"
+    xmlns:p1="urn:import:com.google.gwt.user.cellview.client"
+    xmlns:b="urn:import:com.appspot.bootstrap4gwt.client.ui">
     <ui:style>
         .panel {
         	display: inline;
@@ -13,20 +15,20 @@
                     <div class="control-group">
                         <label class="control-label">Age</label>
                         <div class="controls">
-                            <g:TextBox ui:field="age" styleName="xlarge" />
+                            <b:TextBox ui:field="age" />
                             <span class="help-inline">age must be number.</span>
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label">Name</label>
                         <div class="controls">
-                            <g:TextBox ui:field="name" styleName="xlarge" />
+                            <b:TextBox ui:field="name" />
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label">Address</label>
                         <div class="controls">
-                            <g:TextBox ui:field="address" styleName="xlarge" />
+                            <b:TextBox ui:field="address" />
                         </div>
                     </div>
                     <div class="control-group">
@@ -42,8 +44,8 @@
                 </fieldset>
                 <fieldset>
                     <div class="form-actions">
-                        <g:Button ui:field="button" styleName="btn btn-primary" text="send" />
-                        <g:Button ui:field="cancel" styleName="btn" text="cancel" />
+                        <b:ButtonPrimary ui:field="button" text="send" />
+                        <b:Button ui:field="cancel" text="cancel" />
                     </div>
                 </fieldset>
             </g:HTMLPanel>

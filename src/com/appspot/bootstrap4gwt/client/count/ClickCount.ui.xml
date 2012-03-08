@@ -1,18 +1,19 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+    xmlns:b="urn:import:com.appspot.bootstrap4gwt.client.ui">
 	<ui:style>
 		
 	</ui:style>
 	<g:HTMLPanel>
 	  <form><fieldset>
 			<div class="form-actions">
-				<g:Button ui:field="button" styleName="btn btn-primary" text="click me!" />
+				<b:ButtonPrimary ui:field="button" text="click me!" />
 			</div>
 			<div class="control-group">
 				<label class="control-label">count</label>
 				<div class="controls">
-					<span class="uneditable-input"><g:Label ui:field="label" text="0" /></span>
+					<b:UneditableInput ui:field="label" text="0" />
 				</div>
 			</div>
 		</fieldset></form>
