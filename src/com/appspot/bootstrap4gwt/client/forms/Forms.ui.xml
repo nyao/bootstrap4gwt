@@ -34,7 +34,7 @@
                             <div class="controls">
                                 <label class="checkbox">
                                     <b:CheckBox b:id="optionsCheckbox2" value="true"
-                                        disabled="">This is a disabled checkbox</b:CheckBox>
+                                        disabled="" text="This is a disabled checkbox" />
                                 </label>
                             </div>
                         </div>
@@ -92,7 +92,7 @@
                                 <b:TextBox styleName="span1" placeholder=".span1" />
                                 <b:TextBox styleName="span2" placeholder=".span2" />
                                 <b:TextBox styleName="span3" placeholder=".span3" />
-                                
+
                                 <g:ListBox styleName="span1">
                                     <g:item value="1">1</g:item>
                                     <g:item value="2">2</g:item>
@@ -123,8 +123,10 @@
                                 <b:TextBox styleName="input-medium" placeholder=".input-medium" />
                                 <p class="help-block">
                                     You may also use static classes that don't map to the
-                                    grid, adapt to the responsive CSS styles, or account for
-                                    varying types of controls (e.g.,
+                                    grid, adapt
+                                    to the responsive CSS styles, or account for
+                                    varying types of
+                                    controls (e.g.,
                                     <code>input</code>
                                     vs.
                                     <code>select</code>
@@ -149,30 +151,20 @@
                         <div class="control-group">
                             <label class="control-label" for="inlineCheckboxes">Inline checkboxes</label>
                             <div class="controls">
-                                <label class="checkbox inline">
-                                    <b:CheckBox b:id="inlineCheckbox1" value="false">1</b:CheckBox>
-                                </label>
-                                <label class="checkbox inline">
-                                    <b:CheckBox b:id="inlineCheckbox2" value="false">2</b:CheckBox>
-                                </label>
-                                <label class="checkbox inline">
-                                    <b:CheckBox b:id="inlineCheckbox3" value="false">3</b:CheckBox>
-                                </label>
+                                <b:CheckBox b:id="inlineCheckbox1" value="false" text="1" inline="true" />
+                                <b:CheckBox b:id="inlineCheckbox2" value="false" text="2" inline="true" />
+                                <b:CheckBox b:id="inlineCheckbox3" value="false" text="3" inline="true" />
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="optionsCheckboxList">Checkboxes</label>
                             <div class="controls">
-                                <label class="checkbox">
-                                    <b:CheckBox value="false">Option one is this and that—be sure to include why it's great</b:CheckBox>
-                                </label>
-                                <label class="checkbox">
-                                    <b:CheckBox value="false">Option two can also be checked and included in form results</b:CheckBox>
-                                </label>
-                                <label class="checkbox">
-                                    <b:CheckBox value="false">Option three can—yes, you guessed it—also be checked and
-                                    included in form results</b:CheckBox>
-                                </label>
+                                <b:CheckBox value="false"
+                                    text="Option one is this and that—be sure to include why it's great" />
+                                <b:CheckBox value="false"
+                                    text="Option two can also be checked and included in form results" />
+                                <b:CheckBox value="false"
+                                    text="Option three can—yes, you guessed it—also be checked and included in form results" />
                                 <p class="help-block">
                                     <strong>Note:</strong>
                                     Labels surround all the options for much larger click areas and
@@ -184,8 +176,10 @@
                         <div class="control-group">
                             <label class="control-label">Radio buttons</label>
                             <div class="controls">
-                                <b:RadioButton name="optionsRadios"  label="Option one is this and that—be sure to include why it's great" />
-                                <b:RadioButton name="optionsRadios"  label="Option two can is something else and selecting it will deselectoption one" />
+                                <b:RadioButton name="optionsRadios"
+                                    label="Option one is this and that—be sure to include why it's great" />
+                                <b:RadioButton name="optionsRadios"
+                                    label="Option two can is something else and selecting it will deselectoption one" />
                             </div>
                         </div>
                         <div class="form-actions">
