@@ -1,0 +1,85 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:b="urn:import:com.appspot.bootstrap4gwt.client.ui">
+    <ui:style>
+        
+    </ui:style>
+    <g:HTMLPanel>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Button</th>
+                    <th>Class</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <b:Button text="Default" />
+                    </td>
+                    <td>
+                        <code>com.appspot.bootstrap4gwt.client.ui.Button</code>
+                    </td>
+                    <td>Standard gray button with gradient</td>
+                </tr>
+                <tr>
+                    <td>
+                        <b:ButtonPrimary text="Primary" />
+                    </td>
+                    <td>
+                        <code>com.appspot.bootstrap4gwt.client.ui.ButtonPrimary</code>
+                    </td>
+                    <td>Provides extra visual weight and identifies the primary action in a set
+                        of buttons</td>
+                </tr>
+                <tr>
+                    <td>
+                        <b:ButtonInfo text="Info" />
+                    </td>
+                    <td>
+                        <code>com.appspot.bootstrap4gwt.client.ui.ButtonInfo</code>
+                    </td>
+                    <td>Used as an alternate to the default styles</td>
+                </tr>
+                <tr>
+                    <td>
+                        <b:ButtonSuccess text="Success" />
+                    </td>
+                    <td>
+                        <code>com.appspot.bootstrap4gwt.client.ui.ButtonSuccess</code>
+                    </td>
+                    <td>Indicates a successful or positive action</td>
+                </tr>
+                <tr>
+                    <td>
+                        <b:ButtonWarning text="Warning" />
+                    </td>
+                    <td>
+                        <code>com.appspot.bootstrap4gwt.client.ui.ButtonWarning</code>
+                    </td>
+                    <td>Indicates caution should be taken with this action</td>
+                </tr>
+                <tr>
+                    <td>
+                        <b:ButtonDanger text="Danger" />
+                    </td>
+                    <td>
+                        <code>com.appspot.bootstrap4gwt.client.ui.ButtonDanger</code>
+                    </td>
+                    <td>Indicates a dangerous or potentially negative action</td>
+                </tr>
+                <tr>
+                    <td>
+                        <b:ButtonInverse text="Inverse" />
+                    </td>
+                    <td>
+                        <code>com.appspot.bootstrap4gwt.client.ui.ButtonInverse</code>
+                    </td>
+                    <td>Alternate dark gray button, not tied to a semantic action or use</td>
+                </tr>
+            </tbody>
+        </table>
+    </g:HTMLPanel>
+</ui:UiBinder>
