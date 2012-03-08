@@ -7,7 +7,8 @@ import com.google.gwt.user.client.ui.InlineLabel;
 public class UneditableInput extends InlineLabel {
 
     public UneditableInput() {
-        setStyleName("uneditable-input");
+        super();
+        setStyleName("input-xlarge uneditable-input");
     }
 
     public UneditableInput(String text) {

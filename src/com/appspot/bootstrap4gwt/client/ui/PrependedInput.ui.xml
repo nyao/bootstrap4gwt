@@ -1,0 +1,11 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui"
+    xmlns:b="urn:import:com.appspot.bootstrap4gwt.client.ui">
+    <ui:style>
+        
+    </ui:style>
+    <g:HTMLPanel styleName="input-prepend">
+        <g:InlineLabel ui:field="addOn" styleName="add-on" />
+        <b:TextBox ui:field="input" styleName="span2" />
+    </g:HTMLPanel>
+</ui:UiBinder>

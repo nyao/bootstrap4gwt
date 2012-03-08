@@ -11,4 +11,5 @@
     <entry-point class="com.appspot.bootstrap4gwt.client.CellTableSample" />
     <entry-point class="com.appspot.bootstrap4gwt.client.LoginSample" />
     <entry-point class="com.appspot.bootstrap4gwt.client.ButtonsSample" />
+    <entry-point class="com.appspot.bootstrap4gwt.client.FormsSample" />
 </module>
