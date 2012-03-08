@@ -1,6 +1,6 @@
-#Mon Dec 19 15:10:12 JST 2011
+#Fri Mar 02 14:41:50 JST 2012
 eclipse.preferences.version=1
-filesCopiedToWebInfLib=appengine-api-1.0-sdk-1.6.1.jar|appengine-api-labs-1.6.1.jar|appengine-jsr107cache-1.6.1.jar|jsr107cache-1.1.jar|google_sql.jar
+filesCopiedToWebInfLib=appengine-api-1.0-sdk-1.6.3.jar|appengine-api-labs-1.6.3.jar|appengine-jsr107cache-1.6.3.jar|jsr107cache-1.1.jar
 gaeDatanucleusEnabled=false
 gaeDeployDialogSettings=
 gaeHrdEnabled=true
