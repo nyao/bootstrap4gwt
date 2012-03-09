@@ -1,4 +1,4 @@
-package com.appspot.bootstrap4gwt.client.sample.buttons;
+package com.appspot.bootstrap4gwt.client.buttons;
 
 import com.appspot.bootstrap4gwt.client.ui.Button;
 import com.appspot.bootstrap4gwt.client.ui.ButtonSize;
