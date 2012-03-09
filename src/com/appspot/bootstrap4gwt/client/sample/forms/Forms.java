@@ -1,4 +1,4 @@
-package com.appspot.bootstrap4gwt.client.forms;
+package com.appspot.bootstrap4gwt.client.sample.forms;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;

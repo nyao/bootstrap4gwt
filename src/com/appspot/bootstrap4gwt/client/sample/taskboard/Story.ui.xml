@@ -1,6 +1,6 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui"
-    xmlns:t="urn:import:com.appspot.bootstrap4gwt.client.taskboard">
+    xmlns:t="urn:import:com.appspot.bootstrap4gwt.client.sample.taskboard">
     <ui:style>
         .taskboard {
         	width: 100%;

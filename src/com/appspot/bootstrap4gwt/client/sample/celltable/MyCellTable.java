@@ -1,4 +1,4 @@
-package com.appspot.bootstrap4gwt.client.celltable;
+package com.appspot.bootstrap4gwt.client.sample.celltable;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.appspot.bootstrap4gwt.client.breadcrumbs;
+package com.appspot.bootstrap4gwt.client.sample.breadcrumbs;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;

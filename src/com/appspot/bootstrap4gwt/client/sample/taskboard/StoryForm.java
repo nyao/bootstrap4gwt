@@ -1,4 +1,4 @@
-package com.appspot.bootstrap4gwt.client.taskboard;
+package com.appspot.bootstrap4gwt.client.sample.taskboard;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
@@ -11,7 +11,7 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
 
-public class TaskForm extends Composite {
+public class StoryForm extends Composite {
 
     private static TaskFormUiBinder uiBinder = GWT
         .create(TaskFormUiBinder.class);
@@ -24,14 +24,14 @@ public class TaskForm extends Composite {
 
     DialogBox form;
 
-    Story caller;
+    TaskBoard caller;
 
-    interface TaskFormUiBinder extends UiBinder<Widget, TaskForm> {
+    interface TaskFormUiBinder extends UiBinder<Widget, StoryForm> {
     }
 
-    public TaskForm(DialogBox taskForm, Story story) {
-        this.form = taskForm;
-        this.caller = story;
+    public StoryForm(DialogBox form, TaskBoard tb) {
+        this.form = form;
+        this.caller = tb;
         initWidget(uiBinder.createAndBindUi(this));
     }
 
@@ -42,7 +42,7 @@ public class TaskForm extends Composite {
             return;
         }
         
-        caller.addTask(subject.getText());
+        caller.addStory(subject.getText());
         form.hide();
     }
 }

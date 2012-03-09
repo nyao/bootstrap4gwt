@@ -1,4 +1,4 @@
-package com.appspot.bootstrap4gwt.client.celltable;
+package com.appspot.bootstrap4gwt.client.sample.celltable;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;

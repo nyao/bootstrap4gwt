@@ -1,4 +1,4 @@
-package com.appspot.bootstrap4gwt.client.taskboard;
+package com.appspot.bootstrap4gwt.client.sample.taskboard;
 
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HTML;

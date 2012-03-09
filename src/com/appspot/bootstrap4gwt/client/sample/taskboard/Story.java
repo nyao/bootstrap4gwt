@@ -1,4 +1,4 @@
-package com.appspot.bootstrap4gwt.client.taskboard;
+package com.appspot.bootstrap4gwt.client.sample.taskboard;
 
 import java.util.ArrayList;
 import java.util.List;
