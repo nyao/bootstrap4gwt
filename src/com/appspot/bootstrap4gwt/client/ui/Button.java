@@ -16,7 +16,7 @@ public class Button extends com.google.gwt.user.client.ui.Button {
 
     public Button() {
         super(Document.get().createPushButtonElement());
-        addStyleName("btn");
+        setStyleName("btn");
     }
 
     public Button(SafeHtml html) {
@@ -38,6 +38,6 @@ public class Button extends com.google.gwt.user.client.ui.Button {
     }
 
     public void setType(ButtonType type) {
-        addStyleName(type.getValue());
+        setStyleName(type.getValue());
     }
 }
