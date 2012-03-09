@@ -6,11 +6,12 @@
         
     </ui:style>
     <g:HTMLPanel>
+        <code>xmlns:b="urn:import:com.appspot.bootstrap4gwt.client.ui"</code>
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
                     <th>Button</th>
-                    <th>Class</th>
+                    <th>Code</th>
                     <th>Description</th>
                 </tr>
             </thead>
@@ -20,62 +21,62 @@
                         <b:Button text="Default" />
                     </td>
                     <td>
-                        <code>com.appspot.bootstrap4gwt.client.ui.Button</code>
+                        <code>&lt;b:Button text=&quot;Default&quot; /&gt;</code>
                     </td>
                     <td>Standard gray button with gradient</td>
                 </tr>
                 <tr>
                     <td>
-                        <b:ButtonPrimary text="Primary" />
+                        <b:Button type="Primary" text="Primary" />
                     </td>
                     <td>
-                        <code>com.appspot.bootstrap4gwt.client.ui.ButtonPrimary</code>
+                        <code>&lt;b:Button type=&quot;Primary&quot; text=&quot;Primary&quot; /&gt;</code>
                     </td>
                     <td>Provides extra visual weight and identifies the primary action in a set
                         of buttons</td>
                 </tr>
                 <tr>
                     <td>
-                        <b:ButtonInfo text="Info" />
+                        <b:Button type="Info" text="Info" />
                     </td>
                     <td>
-                        <code>com.appspot.bootstrap4gwt.client.ui.ButtonInfo</code>
+                        <code>&lt;b:Button type=&quot;Info&quot; text=&quot;Info&quot; /&gt;</code>
                     </td>
                     <td>Used as an alternate to the default styles</td>
                 </tr>
                 <tr>
                     <td>
-                        <b:ButtonSuccess text="Success" />
+                        <b:Button type="Success" text="Success" />
                     </td>
                     <td>
-                        <code>com.appspot.bootstrap4gwt.client.ui.ButtonSuccess</code>
+                        <code>&lt;b:Button type=&quot;Success&quot; text=&quot;Success&quot; /&gt;</code>
                     </td>
                     <td>Indicates a successful or positive action</td>
                 </tr>
                 <tr>
                     <td>
-                        <b:ButtonWarning text="Warning" />
+                        <b:Button type="Warning" text="Warning" />
                     </td>
                     <td>
-                        <code>com.appspot.bootstrap4gwt.client.ui.ButtonWarning</code>
+                        <code>&lt;b:Button type=&quot;Warning&quot; text=&quot;Warning&quot; /&gt;</code>
                     </td>
                     <td>Indicates caution should be taken with this action</td>
                 </tr>
                 <tr>
                     <td>
-                        <b:ButtonDanger text="Danger" />
+                        <b:Button type="Danger" text="Danger" />
                     </td>
                     <td>
-                        <code>com.appspot.bootstrap4gwt.client.ui.ButtonDanger</code>
+                        <code>&lt;b:Button type=&quot;Danger&quot; text=&quot;Danger&quot; /&gt;</code>
                     </td>
                     <td>Indicates a dangerous or potentially negative action</td>
                 </tr>
                 <tr>
                     <td>
-                        <b:ButtonInverse text="Inverse" />
+                        <b:Button type="Inverse" text="Inverse" />
                     </td>
                     <td>
-                        <code>com.appspot.bootstrap4gwt.client.ui.ButtonInverse</code>
+                        <code>&lt;b:Button type=&quot;Inverse&quot; text=&quot;Inverse&quot; /&gt;</code>
                     </td>
                     <td>Alternate dark gray button, not tied to a semantic action or use</td>
                 </tr>

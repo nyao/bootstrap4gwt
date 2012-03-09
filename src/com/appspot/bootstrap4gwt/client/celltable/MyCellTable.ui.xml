@@ -44,7 +44,7 @@
                 </fieldset>
                 <fieldset>
                     <div class="form-actions">
-                        <b:ButtonPrimary ui:field="button" text="send" />
+                        <b:Button ui:field="button" text="send" />
                         <b:Button ui:field="cancel" text="cancel" />
                     </div>
                 </fieldset>

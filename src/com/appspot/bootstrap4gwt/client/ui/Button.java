@@ -18,23 +18,26 @@ public class Button extends com.google.gwt.user.client.ui.Button {
         super(Document.get().createPushButtonElement());
         addStyleName("btn");
     }
-    
+
     public Button(SafeHtml html) {
         this(html.asString());
     }
-    
+
     public Button(String html) {
         this();
         setHTML(html);
     }
 
     public Button(SafeHtml html, ClickHandler handler) {
-      this(html.asString(), handler);
+        this(html.asString(), handler);
     }
 
     public Button(String html, ClickHandler handler) {
-      this(html);
-      addClickHandler(handler);
+        this(html);
+        addClickHandler(handler);
     }
 
+    public void setType(ButtonType type) {
+        addStyleName(type.getValue());
+    }
 }
