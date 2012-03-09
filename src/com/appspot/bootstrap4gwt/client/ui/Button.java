@@ -9,6 +9,9 @@ import com.google.gwt.safehtml.shared.SafeHtml;
 
 public class Button extends com.google.gwt.user.client.ui.Button {
 
+    private ButtonType buttonType;
+    private ButtonSize buttonSize;
+    
     protected Button(Element element) {
         super(element.<Element> cast());
         ButtonElement.as(element);
@@ -38,6 +41,18 @@ public class Button extends com.google.gwt.user.client.ui.Button {
     }
 
     public void setType(ButtonType type) {
-        setStyleName(type.getValue());
+        this.buttonType = type;
+        setButtonStyle();
+    }
+    
+    public void setButtonSize(ButtonSize size) {
+        this.buttonSize = size;
+        setButtonStyle();
+    }
+    
+    private void setButtonStyle() {
+        setStyleName("");
+        if (this.buttonType != null) addStyleName(this.buttonType.getValue());
+        if (this.buttonSize != null) addStyleName(this.buttonSize.getValue());
     }
 }
