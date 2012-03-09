@@ -6,7 +6,6 @@
         
     </ui:style>
     <g:HTMLPanel>
-        <code>xmlns:b="urn:import:com.appspot.bootstrap4gwt.client.ui"</code>
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
