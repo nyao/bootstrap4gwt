@@ -1,0 +1,37 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui"
+    xmlns:b="urn:import:com.appspot.bootstrap4gwt.client.ui">
+    <ui:style>
+        
+    </ui:style>
+    <g:HTMLPanel>
+        <div class="row">
+            <div class="span6">
+              <b:Breadcrumbs>
+                <b:Li text="Home" />
+              </b:Breadcrumbs>
+              
+              <b:Breadcrumbs>
+                <g:Anchor href="#" text="Home" />
+                <b:Li text="Library" />
+              </b:Breadcrumbs>
+              
+              <b:Breadcrumbs>
+                <g:Anchor href="#" text="Home" />
+                <g:Anchor href="#" text="Library" />
+                <b:Li text="Data" />
+              </b:Breadcrumbs>
+            </div>
+            <div class="span6">
+                <h3>UiBinder</h3>
+                <pre class="prettyprint linenums">
+&lt;b:Breadcrumbs&gt;
+    &lt;g:Anchor href=&quot;#&quot; text=&quot;Home&quot; /&gt;
+    &lt;g:Anchor href=&quot;#&quot; text=&quot;Library&quot; /&gt;
+    &lt;b:Li text=&quot;Data&quot; /&gt;
+&lt;/b:Breadcrumbs&gt;
+                </pre>
+            </div>
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder>
