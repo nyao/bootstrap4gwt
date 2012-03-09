@@ -1,10 +1,33 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui"
-    xmlns:t="urn:import:com.appspot.bootstrap4gwt.client.taskboard">
+    xmlns:t="urn:import:com.appspot.bootstrap4gwt.client.taskboard" xmlns:b="urn:import:com.appspot.bootstrap4gwt.client.ui">
     <ui:style>
         
     </ui:style>
     <g:HTMLPanel>
-        <g:FlowPanel ui:field="boundaryPanel" />
+        <div class="row">
+            <div class="well">
+                <p>move task with drag &amp; drop.</p>
+                <b:Button ui:field="addStory" text="addStory" />
+            </div>
+            <div class="span3">
+                <h2>Story</h2>
+            </div>
+
+            <div class="span3">
+                <h3>ToDo</h3>
+            </div>
+
+            <div class="span3">
+                <h3>Doing</h3>
+            </div>
+
+            <div class="span3">
+                <h3>Done</h3>
+            </div>
+        </div>
+        <div class="row">
+            <g:FlowPanel ui:field="boundaryPanel" />
+        </div>
     </g:HTMLPanel>
 </ui:UiBinder>

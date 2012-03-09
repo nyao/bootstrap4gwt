@@ -3,9 +3,13 @@ package com.appspot.bootstrap4gwt.client.taskboard;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.appspot.bootstrap4gwt.client.ui.Button;
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.uibinder.client.UiField;
@@ -17,6 +21,9 @@ public class TaskBoard extends Composite {
 
     @UiField
     FlowPanel boundaryPanel;
+    
+    @UiField
+    Button addStory;
 
     interface TaskBoardUiBinder extends UiBinder<Widget, TaskBoard> {
     }
@@ -37,5 +44,12 @@ public class TaskBoard extends Composite {
     public void addStory(String text) {
         Story s = new Story(text);
         this.boundaryPanel.add(s);
+    }
+    
+    @UiHandler("addStory")
+    void onButtonClick(ClickEvent event) {
+        DialogBox taskForm = new DialogBox();
+        taskForm.setWidget(new StoryForm(taskForm, this));
+        taskForm.center();
     }
 }

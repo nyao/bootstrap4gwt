@@ -7,7 +7,6 @@
     <source path="client" />
     <source path="shared" />
 
-    <entry-point class="com.appspot.bootstrap4gwt.client.TaskBoardSample" />
     <entry-point class="com.appspot.bootstrap4gwt.client.LoginSample" />
     <entry-point class="com.appspot.bootstrap4gwt.client.EntryPointForSample" />
 </module>
