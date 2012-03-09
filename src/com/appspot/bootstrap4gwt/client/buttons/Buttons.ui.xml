@@ -7,6 +7,7 @@
     <g:HTMLPanel>
         <div class="row">
             <div class="span8">
+                <p>Please click button and confirm large button change color.</p>
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
@@ -17,7 +18,7 @@
                     <tbody>
                         <tr>
                             <td>
-                                <b:Button text="Default" />
+                                <b:Button ui:field="defaultButton" text="Default" />
                             </td>
                             <td>
                                 <code>&lt;b:Button text=&quot;Default&quot; /&gt;</code>
@@ -25,7 +26,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <b:Button type="Primary" text="Primary" />
+                                <b:Button ui:field="primary" type="Primary" text="Primary" />
                             </td>
                             <td>
                                 <code>&lt;b:Button type=&quot;Primary&quot; text=&quot;Primary&quot;
@@ -34,7 +35,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <b:Button type="Info" text="Info" />
+                                <b:Button ui:field="info" type="Info" text="Info" />
                             </td>
                             <td>
                                 <code>&lt;b:Button type=&quot;Info&quot; text=&quot;Info&quot; /&gt;</code>
@@ -42,7 +43,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <b:Button type="Success" text="Success" />
+                                <b:Button ui:field="success" type="Success" text="Success" />
                             </td>
                             <td>
                                 <code>&lt;b:Button type=&quot;Success&quot; text=&quot;Success&quot;
@@ -51,7 +52,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <b:Button type="Warning" text="Warning" />
+                                <b:Button ui:field="warning" type="Warning" text="Warning" />
                             </td>
                             <td>
                                 <code>&lt;b:Button type=&quot;Warning&quot; text=&quot;Warning&quot;
@@ -60,7 +61,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <b:Button type="Danger" text="Danger" />
+                                <b:Button ui:field="danger" type="Danger" text="Danger" />
                             </td>
                             <td>
                                 <code>&lt;b:Button type=&quot;Danger&quot; text=&quot;Danger&quot;
@@ -69,7 +70,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <b:Button type="Inverse" text="Inverse" />
+                                <b:Button ui:field="inverse" type="Inverse" text="Inverse" />
                             </td>
                             <td>
                                 <code>&lt;b:Button type=&quot;Inverse&quot; text=&quot;Inverse&quot;
@@ -80,7 +81,7 @@
                 </table>
             </div>
             <div class="span4">
-                <b:Button text="Default" type="" buttonSize="Large" />
+                <b:Button ui:field="sample" text="Default" buttonSize="Large" />
             </div>
         </div>
     </g:HTMLPanel>
