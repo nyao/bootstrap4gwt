@@ -9,7 +9,7 @@ import com.google.gwt.safehtml.shared.SafeHtml;
 
 public class Button extends com.google.gwt.user.client.ui.Button {
 
-    private ButtonType buttonType;
+    private ButtonType type;
     private ButtonSize buttonSize;
     
     protected Button(Element element) {
@@ -39,10 +39,18 @@ public class Button extends com.google.gwt.user.client.ui.Button {
         this(html);
         addClickHandler(handler);
     }
+    
+    public ButtonType getType() {
+        return type;
+    }
 
     public void setType(ButtonType type) {
-        this.buttonType = type;
+        this.type = type;
         setButtonStyle();
+    }
+    
+    public ButtonSize getButtonSize() {
+        return buttonSize;
     }
     
     public void setButtonSize(ButtonSize size) {
@@ -52,7 +60,7 @@ public class Button extends com.google.gwt.user.client.ui.Button {
     
     private void setButtonStyle() {
         setStyleName("");
-        if (this.buttonType != null) addStyleName(this.buttonType.getValue());
+        if (this.type != null) addStyleName(this.type.getValue());
         if (this.buttonSize != null) addStyleName(this.buttonSize.getValue());
     }
 }
