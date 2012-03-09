@@ -1,16 +1,15 @@
 package com.appspot.bootstrap4gwt.client.ui;
 
-public enum ButtonSize {
+public enum ButtonState {
 
     Default("btn"),
-    Large("btn-large"),
-    Small("btn-small"),
-    Mini("btn-mini"), 
+    Active("active"),
+    Disabled("disabled"),
     ;
     
     private String value;
 
-    private ButtonSize(String value) {
+    private ButtonState(String value) {
         this.value = value;
     }
 

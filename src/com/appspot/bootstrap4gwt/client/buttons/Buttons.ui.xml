@@ -6,8 +6,13 @@
     </ui:style>
     <g:HTMLPanel>
         <div class="row">
-            <div class="span8">
-                <p>Please click button and confirm large button change color.</p>
+            <div class="span6">
+              <p>Please click button and confirm sample button change style.</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="span6">
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
@@ -18,7 +23,7 @@
                     <tbody>
                         <tr>
                             <td>
-                                <b:Button ui:field="defaultButton" text="Default" />
+                                <b:Button ui:field="defaultType" text="Default" />
                             </td>
                             <td>
                                 <code>&lt;b:Button text=&quot;Default&quot; /&gt;</code>
@@ -80,8 +85,90 @@
                     </tbody>
                 </table>
             </div>
+            <div class="span6">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Button</th>
+                            <th>Code</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <b:Button ui:field="defaultSize" text="Default" />
+                            </td>
+                            <td>
+                                <code>&lt;b:Button text=&quot;Default&quot; /&gt;</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b:Button ui:field="large" buttonSize="Large" text="Large" />
+                            </td>
+                            <td>
+                                <code> &lt;b:Button buttonSize=&quot;Large&quot; text=&quot;Large&quot; /&gt;</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b:Button ui:field="small" buttonSize="Small" text="Small" />
+                            </td>
+                            <td>
+                                <code>&lt;b:Button buttonSize=&quot;Small&quot; text=&quot;Small&quot; /&gt;</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b:Button ui:field="mini" buttonSize="Mini" text="Mini" />
+                            </td>
+                            <td>
+                                <code>&lt;b:Button buttonSize=&quot;Mini&quot; text=&quot;Mini&quot; /&gt;</code>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Button</th>
+                            <th>Code</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <b:Button ui:field="defaultState" text="Default" />
+                            </td>
+                            <td>
+                                <code>&lt;b:Button text=&quot;Default&quot; /&gt;</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b:Button ui:field="disabled" state="Disabled" text="Disabled" />
+                            </td>
+                            <td>
+                                <code> &lt;b:Button state=&quot;Disabled&quot; text=&quot;Disabled&quot; /&gt;</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b:Button ui:field="active" state="Active" text="Active" />
+                            </td>
+                            <td>
+                                <code>&lt;b:Button state=&quot;Active&quot; text=&quot;Active&quot; /&gt;</code>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="row">
             <div class="span4">
-                <b:Button ui:field="sample" text="Default" buttonSize="Large" />
+                <b:Button ui:field="sample" text="Sample Button" />
             </div>
         </div>
     </g:HTMLPanel>
