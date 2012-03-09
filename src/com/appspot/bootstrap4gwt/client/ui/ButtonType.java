@@ -2,6 +2,7 @@ package com.appspot.bootstrap4gwt.client.ui;
 
 public enum ButtonType {
 
+    Default("btn"),
     Primary("btn btn-primary"),
     Info("btn btn-infor"),
     Success("btn btn-success"),
