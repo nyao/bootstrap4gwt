@@ -13,52 +13,57 @@ public class Breadcrumbs extends ComplexPanel {
         setElement(Document.get().createULElement());
         setStyleName("breadcrumb");
     }
-    
+
     public void add(Anchor child) {
         Li li = new Li();
         if (child.getStyleName().indexOf("active") > -1) {
             li.setStyleName("active");
         }
-        if (getWidgetCount() > 0) {
-            InlineHTML divider = new InlineHTML("/");
-            divider.setStyleName("divider");
-            li.add(divider);
-        }
-        li.add(child);
-        add(li, getElement());
+        
+        addLi(li, child);
     }
-    
+
     public void add(Li child) {
         Li li = new Li();
         li.setStyleName("active");
-        if (getWidgetCount() > 0) {
-            InlineHTML divider = new InlineHTML("/");
-            divider.setStyleName("divider");
-            li.add(divider);
-        }
-        li.add(child);
-        add(li, getElement());
+        
+        addLi(li, child);
     }
     
+    private void addLi(Li li, Widget w) {
+        if (getWidgetCount() > 0) {
+            li.add(new Divider());
+        }
+        li.add(w);
+        add(li, getElement());
+    }
+
     @Override
     @Deprecated
     public void add(IsWidget child) {
         super.add(child);
     }
-    
+
     @Override
     @Deprecated
     public void add(Widget child) {
         super.add(child);
     }
-    
+
     public Anchor getAnchor(int index) {
         return (Anchor) super.getWidget(index);
     }
-    
+
     @Override
     @Deprecated
     public Widget getWidget(int index) {
         return super.getWidget(index);
+    }
+
+    private static class Divider extends InlineHTML {
+        protected Divider() {
+            super("/");
+            setStyleName("divider");
+        }
     }
 }
