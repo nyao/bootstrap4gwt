@@ -8,8 +8,6 @@
     <source path="shared" />
 
     <entry-point class="com.appspot.bootstrap4gwt.client.TaskBoardSample" />
-    <entry-point class="com.appspot.bootstrap4gwt.client.CellTableSample" />
     <entry-point class="com.appspot.bootstrap4gwt.client.LoginSample" />
-    <entry-point class="com.appspot.bootstrap4gwt.client.ButtonsSample" />
-    <entry-point class="com.appspot.bootstrap4gwt.client.FormsSample" />
+    <entry-point class="com.appspot.bootstrap4gwt.client.EntryPointForSample" />
 </module>
