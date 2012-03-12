@@ -188,7 +188,7 @@
 		<profile>
 			<id>for-sample</id>
 			<activation>
-				<activeByDefault>false</activeByDefault>
+				<activeByDefault>true</activeByDefault>
 			</activation>
 			<dependencies>
 				<!-- client side -->
