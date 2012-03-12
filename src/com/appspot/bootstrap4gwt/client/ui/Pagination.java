@@ -42,19 +42,23 @@ public class Pagination extends ComplexPanel {
         li.add(child);
         add(li, (com.google.gwt.user.client.Element) ul);
         
-        if (activeAnchor != null) activeAnchor = li;
+        if (activeAnchor == null) {
+            activeAnchor = li;
+            activeAnchor.addStyleName("active");
+        }
     }
     
-    public void setPrev(Anchor anchor) {
+    public void add(PaginationPrev anchor) {
         anchor.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
                 final int index = getWidgetIndex(activeAnchor);
-                int count = 1;
-                if (prev != null) count --;
-                if (index - 1 <= count) return;
+                if (index <= 0) return;
+                Li newActive = (Li) getWidget(index - 1);
+                if (newActive.equals(prev)) return;
+                
                 if (activeAnchor != null) activeAnchor.removeStyleName("active");
-                activeAnchor = (Li) getWidget(index - 1);
+                activeAnchor = newActive;
                 activeAnchor.addStyleName("active");
             }
         });
@@ -65,17 +69,18 @@ public class Pagination extends ComplexPanel {
         this.prev = li;
     }
 
-    public void setNext(Anchor anchor) {
+    public void add(PaginationNext anchor) {
         anchor.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
                 final int index = getWidgetIndex(activeAnchor);
                 int count = getWidgetCount();
-                if (prev != null) count --;
-                if (next != null) count --;
                 if (index >= count) return;
+                Li newActive = (Li) getWidget(index + 1);
+                if (newActive.equals(next)) return;
+                
                 if (activeAnchor != null) activeAnchor.removeStyleName("active");
-                activeAnchor = (Li) getWidget(index + 1);
+                activeAnchor = newActive;
                 activeAnchor.addStyleName("active");
             }
         });

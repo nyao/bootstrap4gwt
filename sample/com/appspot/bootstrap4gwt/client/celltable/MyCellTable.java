@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.appspot.bootstrap4gwt.client.ui.Pagination;
+import com.appspot.bootstrap4gwt.client.ui.PaginationNext;
+import com.appspot.bootstrap4gwt.client.ui.PaginationPrev;
 import com.appspot.bootstrap4gwt.shared.model.Person;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;
@@ -137,14 +139,14 @@ public class MyCellTable extends Composite {
 
         pager.setDisplay(cellTable);
         pagingPanel.clear();
-        final Anchor prev = new Anchor("prev");
+        final PaginationPrev prev = new PaginationPrev("prev");
         prev.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
                 setPageAndRedraw(pager.getPage() - 1);
             }
         });
-        pagingPanel.setPrev(prev);
+        pagingPanel.add(prev);
         for (int i = 0; i < pager.getPageCount(); i++) {
             final int index = i;
             final Anchor pageAnchor = new Anchor(String.valueOf(index));
@@ -159,14 +161,14 @@ public class MyCellTable extends Composite {
             });
             pagingPanel.add(pageAnchor);
         }
-        final Anchor next = new Anchor("next");
+        final PaginationNext next = new PaginationNext("next");
         next.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
                 setPageAndRedraw(pager.getPage() + 1);
             }
         });
-        pagingPanel.setNext(next);
+        pagingPanel.add(next);
     }
 
     void setPageAndRedraw(int page) {
