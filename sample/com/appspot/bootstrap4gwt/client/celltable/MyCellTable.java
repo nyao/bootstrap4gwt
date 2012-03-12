@@ -6,7 +6,6 @@ import java.util.List;
 import com.appspot.bootstrap4gwt.client.ui.Pagination;
 import com.appspot.bootstrap4gwt.client.ui.PaginationNext;
 import com.appspot.bootstrap4gwt.client.ui.PaginationPrev;
-import com.appspot.bootstrap4gwt.shared.model.Person;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.event.dom.client.ClickEvent;

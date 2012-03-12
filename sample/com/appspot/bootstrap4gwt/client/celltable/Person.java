@@ -1,4 +1,4 @@
-package com.appspot.bootstrap4gwt.shared.model;
+package com.appspot.bootstrap4gwt.client.celltable;
 
 import java.io.Serializable;
 

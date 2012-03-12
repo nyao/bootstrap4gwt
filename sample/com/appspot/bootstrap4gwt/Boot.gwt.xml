@@ -3,7 +3,6 @@
 <module rename-to="boot">
     <inherits name="com.appspot.bootstrap4gwt.Bootstrap" />
     <inherits name='com.allen_sauer.gwt.dnd.gwt-dnd' />
-    <source path="shared" />
 
     <entry-point class="com.appspot.bootstrap4gwt.client.LoginSample" />
     <entry-point class="com.appspot.bootstrap4gwt.client.EntryPointForSample" />
