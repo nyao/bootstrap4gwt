@@ -3,17 +3,18 @@ package com.appspot.bootstrap4gwt.client.celltable;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.appspot.bootstrap4gwt.client.ui.Pagination;
 import com.appspot.bootstrap4gwt.shared.model.Person;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.KeyPressEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.FormPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
@@ -39,7 +40,7 @@ public class MyCellTable extends Composite {
     SimplePager pager = new SimplePager();
 
     @UiField
-    FlowPanel pagingPanel;
+    Pagination pagingPanel;
 
     List<Person> values = new ArrayList<Person>();
 
@@ -60,10 +61,6 @@ public class MyCellTable extends Composite {
 
     @UiField
     ListBox sex;
-    @UiField
-    Anchor prev;
-    @UiField
-    Anchor next;
 
     public MyCellTable() {
         initWidget(uiBinder.createAndBindUi(this));
@@ -108,35 +105,6 @@ public class MyCellTable extends Composite {
         view();
     }
 
-    private void view() {
-        cellTable.setRowCount(values.size(), true);
-        cellTable.setRowData(0, values);
-        cellTable.redraw();
-
-        pager.setDisplay(cellTable);
-        pagingPanel.clear();
-        for (int i = 0; i < pager.getPageCount(); i++) {
-            final int index = i;
-            final Anchor pageAnchor = new Anchor(String.valueOf(index));
-//            final Anchor pageAnchor = new Anchor(String.valueOf(index)) {
-//                @Override
-//                void onAnchorClick(ClickEvent event) {
-//                    Anchor before = (Page) pagingPanel.getWidget(pager.getPage());
-//                    before.deactivation();
-//
-//                    pager.setPage(index);
-//                    activation();
-//                    cellTable.setRowCount(values.size(), true);
-//                    cellTable.setRowData(0, values);
-//                    cellTable.redraw();
-//                }
-//            };
-//            if (index == pager.getPage())
-//                pageAnchor.activation();
-            pagingPanel.add(pageAnchor);
-        }
-    }
-
     @UiHandler("age")
     void onKeyPress(KeyPressEvent event) {
         if (event.getCharCode() < '0' || event.getCharCode() > '9') {
@@ -162,28 +130,50 @@ public class MyCellTable extends Composite {
         age.setFocus(true);
     }
 
-    @UiHandler("prev")
-    void onPrevClick(ClickEvent event) {
-        setPageAndRedraw(pager.getPage() - 1);
-    }
+    private void view() {
+        cellTable.setRowCount(values.size(), true);
+        cellTable.setRowData(0, values);
+        cellTable.redraw();
 
-    @UiHandler("next")
-    void onNextClick(ClickEvent event) {
-        setPageAndRedraw(pager.getPage() + 1);
+        pager.setDisplay(cellTable);
+        pagingPanel.clear();
+        final Anchor prev = new Anchor("prev");
+        prev.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                setPageAndRedraw(pager.getPage() - 1);
+            }
+        });
+        pagingPanel.setPrev(prev);
+        for (int i = 0; i < pager.getPageCount(); i++) {
+            final int index = i;
+            final Anchor pageAnchor = new Anchor(String.valueOf(index));
+            pageAnchor.addClickHandler(new ClickHandler() {
+                @Override
+                public void onClick(ClickEvent event) {
+                  pager.setPage(index);
+                  cellTable.setRowCount(values.size(), true);
+                  cellTable.setRowData(0, values);
+                  cellTable.redraw();
+                }
+            });
+            pagingPanel.add(pageAnchor);
+        }
+        final Anchor next = new Anchor("next");
+        next.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                setPageAndRedraw(pager.getPage() + 1);
+            }
+        });
+        pagingPanel.setNext(next);
     }
 
     void setPageAndRedraw(int page) {
-        if (page < 0 || page >= pager.getPageCount() - 1) {
+        if (page < 0) {
             return;
         }
-        PageAnchor before = (PageAnchor) pagingPanel.getWidget(pager.getPage());
-        before.deactivation();
-
         pager.setPage(page);
-
-        PageAnchor after = (PageAnchor) pagingPanel.getWidget(pager.getPage());
-        after.activation();
-
         cellTable.setRowCount(values.size(), true);
         cellTable.setRowData(0, values);
         cellTable.redraw();

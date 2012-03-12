@@ -48,11 +48,7 @@
                 </fieldset>
             </g:HTMLPanel>
         </g:FormPanel>
-        <b:Pagination>
-            <g:Anchor styleName="prev" text="prev" ui:field="prev" />
-            <g:FlowPanel ui:field="pagingPanel" styleName="{style.panel}" />
-            <g:Anchor styleName="next" text="next" ui:field="next" />
-        </b:Pagination>
+        <b:Pagination ui:field="pagingPanel" />
         <p1:CellTable ui:field="cellTable" styleName="table table-striped" pageSize="5" />
     </g:HTMLPanel>
 </ui:UiBinder>
