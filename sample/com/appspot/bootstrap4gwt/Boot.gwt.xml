@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.3.0//EN" "http://google-web-toolkit.googlecode.com/svn/tags/2.3.0/distro-source/core/src/gwt-module.dtd">
 <module rename-to="boot">
-	<inherits name="com.appspot.bootstrap4gwt.Bootstrap"/>
-	<inherits name="com.google.gwt.user.User" />
-	<source path="shared" />
+    <inherits name="com.appspot.bootstrap4gwt.Bootstrap" />
+    <inherits name="com.google.gwt.user.User" />
+    <inherits name='com.allen_sauer.gwt.dnd.gwt-dnd' />
+    <source path="shared" />
 
-	<entry-point class="com.appspot.bootstrap4gwt.client.LoginSample" />
-	<entry-point class="com.appspot.bootstrap4gwt.client.EntryPointForSample" />
+    <entry-point class="com.appspot.bootstrap4gwt.client.LoginSample" />
+    <entry-point class="com.appspot.bootstrap4gwt.client.EntryPointForSample" />
 </module>
