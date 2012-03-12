@@ -117,21 +117,22 @@ public class MyCellTable extends Composite {
         pagingPanel.clear();
         for (int i = 0; i < pager.getPageCount(); i++) {
             final int index = i;
-            final PageAnchor pageAnchor = new PageAnchor(String.valueOf(index)) {
-                @Override
-                void onAnchorClick(ClickEvent event) {
-                    PageAnchor before = (PageAnchor) pagingPanel.getWidget(pager.getPage());
-                    before.deactivation();
-
-                    pager.setPage(index);
-                    activation();
-                    cellTable.setRowCount(values.size(), true);
-                    cellTable.setRowData(0, values);
-                    cellTable.redraw();
-                }
-            };
-            if (index == pager.getPage())
-                pageAnchor.activation();
+            final Anchor pageAnchor = new Anchor(String.valueOf(index));
+//            final Anchor pageAnchor = new Anchor(String.valueOf(index)) {
+//                @Override
+//                void onAnchorClick(ClickEvent event) {
+//                    Anchor before = (Page) pagingPanel.getWidget(pager.getPage());
+//                    before.deactivation();
+//
+//                    pager.setPage(index);
+//                    activation();
+//                    cellTable.setRowCount(values.size(), true);
+//                    cellTable.setRowData(0, values);
+//                    cellTable.redraw();
+//                }
+//            };
+//            if (index == pager.getPage())
+//                pageAnchor.activation();
             pagingPanel.add(pageAnchor);
         }
     }

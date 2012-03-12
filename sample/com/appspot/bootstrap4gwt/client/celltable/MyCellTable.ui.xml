@@ -1,8 +1,6 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
-<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-    xmlns:g="urn:import:com.google.gwt.user.client.ui"
-    xmlns:p1="urn:import:com.google.gwt.user.cellview.client"
-    xmlns:b="urn:import:com.appspot.bootstrap4gwt.client.ui">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui"
+    xmlns:p1="urn:import:com.google.gwt.user.cellview.client" xmlns:b="urn:import:com.appspot.bootstrap4gwt.client.ui">
     <ui:style>
         .panel {
         	display: inline;
@@ -50,17 +48,11 @@
                 </fieldset>
             </g:HTMLPanel>
         </g:FormPanel>
-        <div class="pagination">
-            <ul>
-                <li>
-                    <g:Anchor styleName="prev" text="prev" ui:field="prev" />
-                </li>
-                <g:FlowPanel ui:field="pagingPanel" styleName="{style.panel}" />
-                <li>
-                    <g:Anchor styleName="next" text="next" ui:field="next" />
-                </li>
-            </ul>
-        </div>
+        <b:Pagination>
+            <g:Anchor styleName="prev" text="prev" ui:field="prev" />
+            <g:FlowPanel ui:field="pagingPanel" styleName="{style.panel}" />
+            <g:Anchor styleName="next" text="next" ui:field="next" />
+        </b:Pagination>
         <p1:CellTable ui:field="cellTable" styleName="table table-striped" pageSize="5" />
     </g:HTMLPanel>
 </ui:UiBinder>
