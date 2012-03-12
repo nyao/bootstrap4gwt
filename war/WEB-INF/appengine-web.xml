@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
 	<application>bootstrap4gwt</application>
-	<version>stable017</version>
+	<version>stable018</version>
 	
 	<precompilation-enabled>true</precompilation-enabled>
 	
