@@ -72,6 +72,8 @@
 		<finalName>bootstrap4gwt</finalName>
 		<sourceDirectory>src</sourceDirectory>
 		<testSourceDirectory>test</testSourceDirectory>
+        <outputDirectory>war/WEB-INF/classes</outputDirectory>
+        <testOutputDirectory>target/test-classes</testOutputDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -188,7 +190,7 @@
 		<profile>
 			<id>for-sample</id>
 			<activation>
-				<activeByDefault>true</activeByDefault>
+				<activeByDefault>false</activeByDefault>
 			</activation>
 			<dependencies>
 				<!-- client side -->
