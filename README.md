@@ -1,6 +1,9 @@
-build for library
+#Twitter Bootstrap for GWT
 
- mvn clean compile
+Twitter Bootstrap for GWT is a widget library for Google Web Toolkit(GWT).
 
-build with sample
- mvn -Pfor-sample clean compile
+##build for library
+mvn clean compile
+
+##build with sample
+mvn -Pfor-sample clean compile
