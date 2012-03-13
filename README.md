@@ -13,6 +13,7 @@ mvn -Pfor-sample clean compile
 
 ##using
 * download https://github.com/downloads/YusukeKokubo/bootstrap4gwt/bootstrap4gwt.jar
+ * !Caution! Now this file is early-access(SNAPSHOT) version.
 * adding <code>&lt;inherits name="com.appspot.bootstrap4gwt.Bootstrap"/&gt;</code> in your module xml
 * If you need use in UiBinder,adding <code>xmlns:b="urn:import:com.appspot.bootstrap4gwt.client.ui"</code> in root of ui.xml
 * load bootstrap.css and bootstrap.js in module html or module xml (*.gwt.xml).<br>
