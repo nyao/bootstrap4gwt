@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="./assets/css/gwt.css">
+<link rel="stylesheet" href="./assets/css/bootstrap.css">
+<style type="text/css">
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+</style>
+<link rel="stylesheet" href="./assets/css/app.css">
+
+<title>Bootstrap for GWT</title>
+<script type="text/javascript" language="javascript" src="./boot/boot.nocache.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18010415-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+    <iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1'
+        style="position: absolute; width: 0; height: 0; border: 0"></iframe>
+
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a href="#" class="brand">bootstrap4gwt</a>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="/">Home</a></li>
+                        <li class=""><a href="#buttons">Buttons</a></li>
+                        <li class=""><a href="#breadcrumbs">Breadcrumbs</a></li>
+                        <li class=""><a href="#forms">Forms</a></li>
+                        <li class=""><a href="#signin">Sign in</a></li>
+                        <li class=""><a href="#taskboard">Task Board</a></li>
+                        <li class=""><a href="#celltable">Cell Table</a></li>
+                    </ul>
+                </div>
+                <ul class="nav pull-right">
+                    <li class="dropdown"><a class="dropdown-toggle" href="#"
+                        data-toggle="dropdown"> <span class="normal-text">Logged in as </span> <span
+                            id="UserName"></span> <b class="caret"></b>
+                    </a>
+                        <ul class="dropdown-menu">
+                            <li><span id="link2loginout"></span></li>
+                        </ul></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="hero-unit">
+            <h1>Twitter Bootstrap for GWT</h1>
+            <p class="lead">a sample for Google Web Toolkit.</p>
+        </div>
+        <div class="row">
+            <div class="span4">
+                <h6>Bootstrap, from Twitter</h6>
+                <p>Bootstrap is a toolkit from Twitter designed to kickstart development of
+                    webapps and sites.</p>
+                <p>
+                    <a target="_blank" href="http://twitter.github.com/bootstrap/" class="btn">Bootstrap
+                        from Twitter »</a>
+                </p>
+            </div>
+            <div class="span4">
+                <h6>Google Web Toolkit</h6>
+                <p>GWT is a Toolkit for building and optimizing complex browser-based
+                    applications.</p>
+                <p>
+                    <a target="_blank" href="http://code.google.com/intl/en/webtoolkit/" class="btn">Google
+                        Web Toolkit »</a>
+                </p>
+            </div>
+            <div class="span4">
+                <h6>Fork on Github</h6>
+                <p>Download, fork, pull, file issues, and more as the official Bootstrap repo on
+                    Github.</p>
+                <p>
+                    <a target="_blank" href="https://github.com/YusukeKokubo/bootstrap4gwt"
+                        class="btn btn-primary">Bootstrap for GWT on GitHub »</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="usage">
+            <div class="page-header">
+                <h1>Usage for Uibinder</h1>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <p>
+                        adding
+                        <code>xmlns:b="urn:import:com.appspot.bootstrap4gwt.client.ui"</code>
+                        in root of xml.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="buttons">
+            <div class="page-header">
+                <h1>Buttons</h1>
+            </div>
+            <span id="Buttons"></span>
+        </section>
+
+        <section id="breadcrumbs">
+            <div class="page-header">
+                <h1>Breadcrumbs</h1>
+            </div>
+            <span id="Breadcrumbs"></span>
+        </section>
+
+        <section id="pagination">
+            <div class="page-header">
+                <h1>Pagination</h1>
+            </div>
+            <span id="Pagination"></span>
+        </section>
+
+        <section id="forms">
+            <div class="page-header">
+                <h1>Forms</h1>
+            </div>
+            <span id="Forms"></span>
+        </section>
+
+        <section id="signin">
+            <div class="page-header">
+                <h1>Signin</h1>
+            </div>
+            <div class="row">
+                <div class="span2">
+                    <p>You can signin with any string.</p>
+                </div>
+                <div class="span10">
+                    <span id="UserNameOnBoard"></span>
+                    <span id="link2loginoutOnBoard"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="celltable">
+            <div class="page-header">
+                <h1>Cell Table</h1>
+            </div>
+            <div class="row">
+                <div class="span2">
+                    <p>You can add model by form.</p>
+                </div>
+                <div class="span10">
+                    <span id="CellTable"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="taskboard">
+            <div class="page-header">
+                <h1>Task Board</h1>
+            </div>
+            <span id="TaskBoard"></span>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <p class="pull-right">
+                    <a href="#">Back to top</a>
+                </p>
+                <p>
+                    Managed by <a href="http://twitter.com/yusuke_kokubo" target="_blank">@yusuke_kokubo</a>.<br />
+                    Code licensed same as <a href="https://github.com/twitter/bootstrap">Twitter
+                        Bootstrap license.</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/bootstrap-transition.js"></script>
+    <script src="./assets/js/bootstrap-alert.js"></script>
+    <script src="./assets/js/bootstrap-modal.js"></script>
+    <script src="./assets/js/bootstrap-dropdown.js"></script>
+    <script src="./assets/js/bootstrap-scrollspy.js"></script>
+    <script src="./assets/js/bootstrap-tab.js"></script>
+    <script src="./assets/js/bootstrap-tooltip.js"></script>
+    <script src="./assets/js/bootstrap-popover.js"></script>
+    <script src="./assets/js/bootstrap-button.js"></script>
+    <script src="./assets/js/bootstrap-collapse.js"></script>
+    <script src="./assets/js/bootstrap-carousel.js"></script>
+    <script src="./assets/js/bootstrap-typeahead.js"></script>
+</body>
+</html>

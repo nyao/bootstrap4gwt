@@ -1,0 +1,16 @@
+.dateBoxPopup {
+	z-index: 2;
+}
+
+.normal-text {
+	color: #404040;
+}
+
+section {
+  padding-top: 60px;
+}
+
+.docs-input-sizes select, .docs-input-sizes input[type="text"] {
+display: block;
+margin-bottom: 9px;
+}
