@@ -3,6 +3,11 @@ package com.appspot.bootstrap4gwt.client.ui;
 import com.google.gwt.dom.client.Element;
 
 public class TextBox extends com.google.gwt.user.client.ui.TextBox {
+    
+    TextBoxState state;
+    TextBoxInputSize inputSize;
+    GridSize gridSize;
+    TextBoxAlternateSize alternateSize;
 
     public TextBox() {
         super();
@@ -21,22 +26,36 @@ public class TextBox extends com.google.gwt.user.client.ui.TextBox {
         getElement().setAttribute("placeholder", s);
     }
 
-    public void setDisabled(String s) {
-        getElement().setAttribute("disabled", s);
+    public void setState(TextBoxState state) {
+        this.state = state;
+        switch (state) {
+            case Disabled:
+                setEnabled(false);
+                break;
+        }
+        setTextBoxStyle();
     }
-
-    public void setWarning(String s) {
-        Element elm = this.getElement().getParentElement().getParentElement();
-        elm.addClassName("warning");
+    
+    public void setInputSize(TextBoxInputSize size) {
+        this.inputSize = size;
+        setTextBoxStyle();
     }
-
-    public void setError(String s) {
-        Element elm = getElement().getParentElement().getParentElement();
-        elm.addClassName("error");
+    
+    public void setGridSize(GridSize size) {
+        this.gridSize = size;
+        setTextBoxStyle();
     }
-
-    public void setSuccess(String s) {
-        Element elm = getElement().getParentElement().getParentElement();
-        elm.addClassName("success");
+    
+    public void setAlternateSize(TextBoxAlternateSize size) {
+        this.alternateSize = size;
+        setTextBoxStyle();
+    }
+    
+    private void setTextBoxStyle() {
+        setStyleName("");
+        if (this.inputSize != null) addStyleName(this.inputSize.getValue());
+        if (this.gridSize != null) addStyleName(this.gridSize.getValue());
+        if (this.state != null) addStyleName(this.state.getValue());
+        if (this.alternateSize != null) addStyleName(this.alternateSize.getValue());
     }
 }
