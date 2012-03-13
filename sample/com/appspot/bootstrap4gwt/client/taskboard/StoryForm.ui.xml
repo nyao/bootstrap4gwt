@@ -4,11 +4,10 @@
         
     </ui:style>
     <g:HTMLPanel>
-        <div style="position: relative; top: auto; left: auto; margin: 0 auto; z-index: 1"
-            class="modal">
+        <div class="modal">
             <div class="modal-header">
+                <g:Anchor ui:field="close" styleName="close" text="x" />
                 <h3>subject</h3>
-                <a class="close" href="#">×</a>
             </div>
             <div class="modal-body">
                 <g:TextArea ui:field="subject" />

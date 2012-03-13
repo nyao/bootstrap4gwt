@@ -45,4 +45,9 @@ public class TaskForm extends Composite {
         caller.addTask(subject.getText());
         form.hide();
     }
+    
+    @UiHandler("close")
+    void onCloseClick(ClickEvent event) {
+        form.hide();
+    }
 }

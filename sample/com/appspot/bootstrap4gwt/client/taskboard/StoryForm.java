@@ -45,4 +45,9 @@ public class StoryForm extends Composite {
         caller.addStory(subject.getText());
         form.hide();
     }
+    
+    @UiHandler("close")
+    void onCloseClick(ClickEvent event) {
+        form.hide();
+    }
 }
