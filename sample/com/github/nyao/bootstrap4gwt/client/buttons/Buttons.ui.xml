@@ -1,0 +1,175 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui"
+    xmlns:b="urn:import:com.github.nyao.bootstrap4gwt.client.ui">
+    <ui:style>
+        
+    </ui:style>
+    <g:HTMLPanel>
+        <div class="row">
+            <div class="span6">
+              <p>Please click button and confirm sample button change style.</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="span6">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Button</th>
+                            <th>UiBinder</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <b:Button ui:field="defaultType" text="Default" />
+                            </td>
+                            <td>
+                                <code>&lt;b:Button text=&quot;Default&quot; /&gt;</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b:Button ui:field="primary" type="Primary" text="Primary" />
+                            </td>
+                            <td>
+                                <code>&lt;b:Button type=&quot;Primary&quot; text=&quot;Primary&quot;
+                                    /&gt;</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b:Button ui:field="info" type="Info" text="Info" />
+                            </td>
+                            <td>
+                                <code>&lt;b:Button type=&quot;Info&quot; text=&quot;Info&quot; /&gt;</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b:Button ui:field="success" type="Success" text="Success" />
+                            </td>
+                            <td>
+                                <code>&lt;b:Button type=&quot;Success&quot; text=&quot;Success&quot;
+                                    /&gt;</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b:Button ui:field="warning" type="Warning" text="Warning" />
+                            </td>
+                            <td>
+                                <code>&lt;b:Button type=&quot;Warning&quot; text=&quot;Warning&quot;
+                                    /&gt;</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b:Button ui:field="danger" type="Danger" text="Danger" />
+                            </td>
+                            <td>
+                                <code>&lt;b:Button type=&quot;Danger&quot; text=&quot;Danger&quot;
+                                    /&gt;</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b:Button ui:field="inverse" type="Inverse" text="Inverse" />
+                            </td>
+                            <td>
+                                <code>&lt;b:Button type=&quot;Inverse&quot; text=&quot;Inverse&quot;
+                                    /&gt;</code>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="span6">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Button</th>
+                            <th>UiBinder</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <b:Button ui:field="defaultSize" text="Default" />
+                            </td>
+                            <td>
+                                <code>&lt;b:Button text=&quot;Default&quot; /&gt;</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b:Button ui:field="large" buttonSize="Large" text="Large" />
+                            </td>
+                            <td>
+                                <code> &lt;b:Button buttonSize=&quot;Large&quot; text=&quot;Large&quot; /&gt;</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b:Button ui:field="small" buttonSize="Small" text="Small" />
+                            </td>
+                            <td>
+                                <code>&lt;b:Button buttonSize=&quot;Small&quot; text=&quot;Small&quot; /&gt;</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b:Button ui:field="mini" buttonSize="Mini" text="Mini" />
+                            </td>
+                            <td>
+                                <code>&lt;b:Button buttonSize=&quot;Mini&quot; text=&quot;Mini&quot; /&gt;</code>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Button</th>
+                            <th>UiBinder</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <b:Button ui:field="defaultState" text="Default" />
+                            </td>
+                            <td>
+                                <code>&lt;b:Button text=&quot;Default&quot; /&gt;</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b:Button ui:field="disabled" state="Disabled" text="Disabled" />
+                            </td>
+                            <td>
+                                <code> &lt;b:Button state=&quot;Disabled&quot; text=&quot;Disabled&quot; /&gt;</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b:Button ui:field="active" state="Active" text="Active" />
+                            </td>
+                            <td>
+                                <code>&lt;b:Button state=&quot;Active&quot; text=&quot;Active&quot; /&gt;</code>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="span4">
+                <b:Button ui:field="sample" text="Sample Button" />
+            </div>
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder>

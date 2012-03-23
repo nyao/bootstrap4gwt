@@ -1,0 +1,30 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui"
+    xmlns:t="urn:import:com.github.nyao.bootstrap4gwt.client.taskboard">
+    <ui:style>
+        .taskboard {
+        	width: 100%;
+        }
+    </ui:style>
+    <g:HTMLPanel>
+        <g:AbsolutePanel ui:field="boundaryPanel">
+            <g:HTMLPanel>
+                <div class="row">
+                    <div class="span3">
+                        <h2><g:Label ui:field="storyName" /></h2>
+                        <g:Button styleName="btn success" ui:field="addTask" text="add task" />
+                    </div>
+                    <div class="span3">
+                        <t:FlowPanelWithSpacer ui:field="todo" styleName="{style.taskboard}" />
+                    </div>
+                    <div class="span3">
+                        <t:FlowPanelWithSpacer ui:field="doing" styleName="{style.taskboard}" />
+                    </div>
+                    <div class="span3">
+                        <t:FlowPanelWithSpacer ui:field="done" styleName="{style.taskboard}" />
+                    </div>
+                </div>
+            </g:HTMLPanel>
+        </g:AbsolutePanel>
+    </g:HTMLPanel>
+</ui:UiBinder>
